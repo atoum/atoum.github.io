@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ page.title }} - atoum, the modern, simple and intuitive PHP test framework</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="content-type" content="text/javascript; charset=utf-8" />
+    <meta http-equiv="content-type" content="text/css; charset=utf-8" />
+
+    <meta name="viewport" content="initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/css/main.css" type="text/css" />
+    <!--<link rel="stylesheet" href="/Static/Vendor/prism/plugins/line-numbers/prism-line-numbers.css" type="text/css" />-->
+  </head>
+
+  <body>
+
+    <nav id="menu">
+      <ul>
+        <li>
+          <a href="/news.html" id="nav-posts">
+            <img src="/images/icon/news.svg" />
+            news
+          </a>
+        </li>
+        <li>
+          <a href="/features.html" id="nav-features">
+            <img src="/images/icon/features.svg" />
+            features
+          </a>
+        </li>
+        <li>
+          <a href="/sources.html" id="nav-source">
+            <img src="/images/icon/source.svg" />
+            sources
+          </a>
+        </li>
+        <li>
+          <a href="http://docs.atoum.org/" id="nav-documentation">
+            <img src="/images/icon/documentation.svg" />
+            documentations
+          </a>
+        </li>
+        <li>
+          <a href="/community.html" id="nav-community">
+            <img src="/images/icon/community.svg" />
+            community
+          </a>
+        </li>
+        <li>
+          <a href="/about.html" id="nav-about">
+            <img src="/images/icon/about.svg" />
+            about
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="body">
+      <header>
+        {{#link-to 'index' class="bare"}}
+          <img src="/images/logo/atoum.png" alt="atoum" />
+        {{/link-to}}
+      </header>
+
+      <article>
+        {{outlet}}
+      </article>
+
+      <footer>
+        <p>
+          atoum is the creation of Frédéric Hardy, all rights reserved.
+          See
+          <a href="https://raw.githubusercontent.com/atoum/atoum/master/COPYING">the license</a>,
+          <a href="https://twitter.com/atoum_org/">Twitter</a> and
+          <a href="https://github.com/atoum/">Github</a>.
+        </p>
+      </footer>
+    </div>
+
+  </body>
+</html>
+
+
+
