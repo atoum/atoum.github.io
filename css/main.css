@@ -286,6 +286,7 @@ ol {
 }
 
 code, pre, kbd, samp {
+    text-align: left;
     font-family: Pre;
     font-size: .9em;
     color: #072066;

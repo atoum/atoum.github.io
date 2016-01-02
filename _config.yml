@@ -1,5 +1,9 @@
 name: Atoum's website
-markdown: redcarpet
 highlighter: pygments
 exclude:
   - docker-compose.yml
+
+markdown: kramdown
+kramdown:
+    parse_block_html: true
+    parse_span_html: true

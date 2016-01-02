@@ -2,9 +2,9 @@
 layout: static
 ---
 
-<h1>Community</h1>
+# Community
 
-<p><strong><em>To be constructed</em></strong></p>
+_**To be constructed**_
 
 <!--
     Speak about :
