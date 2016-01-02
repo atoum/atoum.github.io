@@ -59,21 +59,35 @@ layout: static
 
     <p>Depending of the kind of tests we are making, there is several ways to
         write a test case. The “classic” (old) way is procedural:</p>
-    <pre class="language-php"><code>$x      = 1;
+
+{% highlight php %}
+<?php
+
+$x      = 1;
 $y      = 2;
 $result = $x + $y;
 
-$this->assertTrue($result === 3);</code></pre>
+$this->assertTrue($result === 3);
+{% endhighlight %}
 
     <p>The “smarter” way by really using atoum's asserters:</p>
-    <pre class="language-php"><code>$x      = 1;
+
+{% highlight php %}
+<?php
+
+$x      = 1;
 $y      = 2;
 $result = $x + $y;
 
-$this->integer($result)->isEqualTo(3);</code></pre>
+$this->integer($result)->isEqualTo(3);
+{% endhighlight %}
 
     <p>The “academic” way:</p>
-    <pre class="language-php"><code>$this
+
+{% highlight php %}
+<?php
+
+$this
     ->given(
         $x = 1,
         $y = 2
@@ -81,7 +95,8 @@ $this->integer($result)->isEqualTo(3);</code></pre>
     ->when($result = $x + $y)
     ->then
         ->integer($result)
-            ->isEqualTo(3);</code></pre>
+            ->isEqualTo(3);
+{% endhighlight %}
 
     <p>In the later example, the <code>given</code>, <code>when</code> and
         <code>then</code> keywords are “empty asserters”. They execute nothing.
@@ -99,20 +114,28 @@ $this->integer($result)->isEqualTo(3);</code></pre>
         greater than <code>100</code> and lower than or equal to
         <code>200</code>:</p>
 
-    <pre class="language-php"><code>$this
+{% highlight php %}
+<?php
+
+$this
     ->integer(150)
         ->isGreaterThan(100)
-        ->isLowerThanOrEqualTo(200);</code></pre>
+        ->isLowerThanOrEqualTo(200);
+{% endhighlight %}
 
     <p>The following example asserts that <code>1 - 0.97</code> is nearly equal
         to <code>0.03</code> (which is
         <a href="http://www.floating-point-gui.de/errors/comparison/">strictly
             false in Computer Science</a>):</p>
 
-    <pre class="language-php"><code>$this
+{% highlight php %}
+<?php
+
+$this
     ->float(1 - 0.97)
         ->isNearlyEqualTo(0.03) // passes
-        ->isEqualTo(0.03);      // fails</code></pre>
+        ->isEqualTo(0.03);      // fails
+{% endhighlight %}
 
     <p>Arrays, strings, objects, exceptions… all of them have specific
         collections of asserters. In addition to provide a better readability,
@@ -134,10 +157,16 @@ $this->integer($result)->isEqualTo(3);</code></pre>
             will mock the <code>Foo\Bar</code> class and will provide a new
             implementation for the <code>methodBaz</code> method:</li>
     </ul>
-    <pre class="language-php"><code>$mockedObject = new \Mock\Foo\Bar();
+
+{% highlight php %}
+<?php
+
+$mockedObject = new \Mock\Foo\Bar();
+
 $this->calling($mockedObject)->methodBaz = function ($x) {
     return $x * 2;
-};</code></pre>
+};
+{% endhighlight %}
 
     <ul>
         <li><strong>Functions</strong>, by using the <code>function</code>
@@ -145,9 +174,14 @@ $this->calling($mockedObject)->methodBaz = function ($x) {
             <a href="http://php.net/session_start"><code>session_start</code></a> PHP
             function and will provide a new implementation:</li>
     </ul>
-    <pre class="language-php"><code>$this->function->session_start = function () {
+
+{% highlight php %}
+<?php
+
+$this->function->session_start = function () {
     return false;
-};</code></pre>
+};
+{% endhighlight %}
 
     <ul>
         <li><strong>Constants</strong>, by using the <code>constant</code>
@@ -155,7 +189,12 @@ $this->calling($mockedObject)->methodBaz = function ($x) {
             <a href="http://php.net/phpversion"><code>PHP_VERSION_ID</code></a>
             constant and will provide a new value:</li>
     </ul>
-    <pre class="language-php"><code>$this->constant->PHP_VERSION_ID = 606060; // troll spotted</code></pre>
+
+{% highlight php %}
+<?php
+
+$this->constant->PHP_VERSION_ID = 606060; // troll spotted
+{% endhighlight %}
 
     <p>Mocks are generated at runtime and they are just that easy to use.</p>
     <p>Of course, you can mock class constructor, you can control the value to
@@ -171,11 +210,16 @@ $this->calling($mockedObject)->methodBaz = function ($x) {
         and directories. Enter <code>atoum://</code>. The following example will
         create a virtual file and the resulting resource can be used like any other
         regular file resources:</p>
-    <pre class="language-php"><code>$file = atoum\mock\streams\fs\file::get('fakeFile');
+
+{% highlight php %}
+<?php
+
+$file = atoum\mock\streams\fs\file::get('fakeFile');
 fwrite($file, 'foobar');
 rewind($file);
 // …
-stream_get_contents($file); // string(6) "foobar"</code></pre>
+stream_get_contents($file); // string(6) "foobar"
+{% endhighlight %}
 
     <p>As expected, you can control the permissions, the ownership, different
         times, content, parents etc.</p>
@@ -213,16 +257,23 @@ stream_get_contents($file); // string(6) "foobar"</code></pre>
         atoum will <strong>only re-run these ones</strong>. You will save time and
         CPU. If no test cases were failling, atoum will re-run all your test
         suites.</p>
-    <pre class="language-shell"><code>$ bin/atoum … --loop
+
+{% highlight sh %}
+$ bin/atoum … --loop
 …
-Press &lt;Enter> to reexecute, press any other key and &lt;Enter> to stop...</code></pre>
+Press &lt;Enter> to reexecute, press any other key and &lt;Enter> to stop...
+{% endhighlight %}
+
     <p>The autorun helps you to run any test cases in any file like a regular
         PHP file if the runner is included. It means you can avoid using the
         command-line tool. Thus, both following examples are equivalent (assuming
         the runner is included):</p>
-  <pre class="language-shell"><code>$ bin/atoum --files Test/Unit/Foo.php
+
+{% highlight sh %}
+$ bin/atoum --files Test/Unit/Foo.php
 $ # is equivalent to…
-$ php Test/Unit/Foo.php</code></pre>
+$ php Test/Unit/Foo.php
+{% endhighlight %}
 </section>
 
 <section class="visual-section">
@@ -230,13 +281,19 @@ $ php Test/Unit/Foo.php</code></pre>
 
     <p>atoum's configuration file is written in PHP. No YAML, no XML, no strange
         language. Only PHP for a maximum flexibility.</p>
-    <pre class="language-php"><code>$script->addDefaultArguments(
+
+{% highlight php %}
+<?php
+
+$script->addDefaultArguments(
     '--debug',
     '--use-tap-report',
     '--loop'
 );
 $runner->addTestsFromDirectory(__DIR__ . '/Test/Unit/');
-// …</code></pre>
+// …
+{% endhighlight %}
+
     <p>Note the global <code>$script</code> and <code>$runner</code> variables:
         Reach any part of atoum to fit in your own workflow.</p>
 </section>
