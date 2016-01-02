@@ -21,29 +21,17 @@ By default, atoum provides three execution engines:
 
 <ul class="bare block-list">
     <li style="max-width: 25%">
-        <figure>
-            <svg viewBox="0 0 100 100" style="max-width: 100px">
-                <rect x="0" y="0" width="100" height="100" stroke="#000" fill="none" />
-            </svg>
-        </figure>
+        <img src="/images/icon/inline.svg" style="width: 100px; height: 100px; display: block; margin: 1rem auto"/>
         <strong>Inline</strong>, one test case after another in the same
         process,
     </li>
     <li style="max-width: 25%">
-        <figure>
-            <svg viewBox="0 0 100 100" style="max-width: 100px">
-                <rect x="0" y="0" width="100" height="100" stroke="#000" fill="none" />
-            </svg>
-        </figure>
+        <img src="/images/icon/isolate.svg" style="width: 100px; height: 100px; display: block; margin: 1rem auto"/>
         <strong>Isolate</strong>, one test case after another but each time in a
         new process,
     </li>
     <li style="max-width: 25%">
-        <figure>
-            <svg viewBox="0 0 100 100" style="max-width: 100px">
-                <rect x="0" y="0" width="100" height="100" stroke="#000" fill="none" />
-            </svg>
-        </figure>
+        <img src="/images/icon/concurrent.svg" style="width: 100px; height: 100px; display: block; margin: 1rem auto"/>
         <strong>Concurrent</strong>, “all” test cases at the same time in
         separated processes.
     </li>
