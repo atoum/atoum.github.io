@@ -1,3 +1,5 @@
 name: Atoum's website
 markdown: redcarpet
-pygments: true
+highlighter: pygments
+exclude:
+  - docker-compose.yml

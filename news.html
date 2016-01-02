@@ -1,0 +1,11 @@
+---
+layout: static
+---
+
+{% for post in site.posts %}
+<li>
+    <h2>
+        <a class="jekmdl-post-list" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> &gt;&gt; {{ site.time | date_to_long_string }}
+    </h2>
+</li>
+{% endfor %}
