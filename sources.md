@@ -14,11 +14,10 @@ without any versions. While this is very challenging because no regression must 
 comfortable for atoum's users that need versions, especially with a quality tool. That's why atoum uses
 <a href="http://www.semver.org/">the semantic versioning specification</a> too.
 
-You can set <a href="https://github.com/atoum/atoum/releases/latest">latest atoum's version</a>. A
+You can see the <a href="https://github.com/atoum/atoum/releases/latest">latest atoum's version</a>. A
 <a href="https://github.com/atoum/atoum/blob/master/CHANGELOG.md">`CHANGELOG.md` file</a> is kept up-to-date.
 
 atoum has 2 release managers. They apply the following rules:
-
 
 1. If a bug has been fixed, a new version is released as soon as possible (it addresses the `z` in `x.y.z`),
 2. Every 6 weeks, a new version is released containing the new features (it addresses the `y` in `x.y.z`),
