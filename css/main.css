@@ -461,19 +461,24 @@ table {
     }
 }
 
-.clearfix:after {
-    content:"";
-    display:table;
-    clear:both;
+.avatars {
+    margin: 1em 0;
+    padding: 0 4rem
 }
+    .avatars:after {
+        content:"";
+        display:table;
+        clear:both;
+    }
 
-.avatar {
-    width: 9%;
-    float: left;
-    margin-right: 1%;
-    text-align: center;
-}
+    .avatar {
+        width: 9%;
+        float: left;
+        margin-right: 1%;
+        text-align: center;
+    }
     .avatar img {
         width: 100%;
         border-radius: 1rem;
     }
+
