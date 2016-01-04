@@ -1,5 +1,6 @@
 name: Atoum's website
 highlighter: pygments
+timezone: Europe/Paris
 exclude:
   - docker-compose.yml
 

@@ -245,6 +245,11 @@ article > section > ul {
     background: rgba(255, 255, 255, .05);
 }
 
+    .visual-section h2:not(:first-of-type),
+    .visual-section h3 {
+        margin-top: 1.5rem;
+    }
+
 h1 {
     text-align: center;
 }
