@@ -1,5 +1,0 @@
----
-layout: static
----
-
-{{ site.github }}
