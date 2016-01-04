@@ -162,10 +162,10 @@ $this->function->session_start = function () {
 $this->constant->PHP_VERSION_ID = 606060; // troll spotted
 {% endhighlight %}
 
-    <p>Mocks are generated at runtime and they are just that easy to use.</p>
-    <p>Of course, you can mock class constructor, you can control the value to
-        compute each time a method is called, you can assert that a method has
-        been called at least once etc.</p>
+Mocks are generated at runtime and they are just that easy to use.
+
+Of course, you can mock class constructor, you can control the value to compute each time a method is called, you can 
+assert that a method has been called at least once etc.
 </section>
 
 <section class="visual-section">
@@ -217,7 +217,7 @@ failling, atoum will re-run all your test suites.
 {% highlight sh %}
 $ bin/atoum … --loop
 …
-Press &lt;Enter> to reexecute, press any other key and &lt;Enter> to stop...
+Press <Enter> to reexecute, press any other key and <Enter> to stop...
 {% endhighlight %}
 
 The autorun helps you to run any test cases in any file like a regular PHP file if the runner is included. It means you
