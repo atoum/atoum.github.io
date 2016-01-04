@@ -7,3 +7,21 @@ markdown: kramdown
 kramdown:
     parse_block_html: true
     parse_span_html: true
+
+github:
+  organization_members:
+    - avatar_url: https://avatars3.githubusercontent.com/u/327237?v=3&s=460
+      login: jubianchi
+      html_url: httpd://github.com/jubianchi
+    - avatar_url: https://avatars3.githubusercontent.com/u/327237?v=3&s=460
+      login: jubianchi
+      html_url: httpd://github.com/jubianchi
+    - avatar_url: https://avatars3.githubusercontent.com/u/327237?v=3&s=460
+      login: jubianchi
+      html_url: httpd://github.com/jubianchi
+    - avatar_url: https://avatars3.githubusercontent.com/u/327237?v=3&s=460
+      login: jubianchi
+      html_url: httpd://github.com/jubianchi
+    - avatar_url: https://avatars3.githubusercontent.com/u/327237?v=3&s=460
+      login: jubianchi
+      html_url: httpd://github.com/jubianchi
