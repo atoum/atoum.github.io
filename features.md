@@ -91,7 +91,7 @@ In the later example, the `given`, `when` and `then` keywords are “empty asser
 <section class="visual-section">
 ## Meaningful asserters
 
-atoum provides a <a href="http://docs.atoum.org/en/latest/chapter2.html#asserters">full-featured set of natural and
+atoum provides a <a href="http://docs.atoum.org/en/latest/asserters.html">full-featured set of natural and
 expressive assertions</a> making test cases as much readable as possible. The following example asserts the integer
 `150` is greater than `100` and lower than or equal to `200`:
 
