@@ -460,3 +460,20 @@ table {
         -webkit-columns: 1;
     }
 }
+
+.clearfix:after {
+    content:"";
+    display:table;
+    clear:both;
+}
+
+.avatar {
+    width: 9%;
+    float: left;
+    margin-right: 1%;
+    text-align: center;
+}
+    .avatar img {
+        width: 100%;
+        border-radius: 1rem;
+    }

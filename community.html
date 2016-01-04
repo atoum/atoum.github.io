@@ -1,0 +1,23 @@
+---
+layout: static
+---
+
+<h1>Community</h1>
+
+<p class="header__paragraph">
+    atoum's community is made of awesome people and tools.
+</p>
+
+<section class="visual-section">
+    <h2>Contributors</h2>
+
+    <div class="avatars">
+        {% for member in site.github.organization_members %}
+        <div class="avatar">
+            <img src="{{ member.avatar_url }}"/>
+            <br/>
+            <a href="{{ member.html_url }}">{{ member.login }}</a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
