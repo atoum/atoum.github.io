@@ -474,8 +474,10 @@ table {
         width: 9%;
         float: left;
         margin-right: 1%;
+        margin-bottom: 1em;
         text-align: center;
     }
+
     .avatar img {
         width: 100%;
         border-radius: 1rem;
