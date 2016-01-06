@@ -8,19 +8,17 @@ categories: release
 
 ## Stats
 
-* 45 commits
-* 69 files changed
-* 6 contributors
-* 8 new features
-* 3 bug fixes
+* 45 commits,
+* 69 files changed,
+* 6 contributors,
+* 8 new features,
+* 3 bug fixes.
 
 ## What's new
 
 ### Asserting on child arrays
 
-Asserting on arrays has just become a bit more awesome. 
-
-Remember when you wanted to assert on child arrays, you had to do things like:
+Asserting on arrays has just become a bit more awesome. Remember when you wanted to assert on child arrays, you had to do things like:
 
 {% highlight php %}
 <?php 
@@ -62,7 +60,7 @@ $this
 ;
 {% endhighlight %}
 
-atoum has also always provided another syntax to assert on child arrays:
+You might also know that atoum provides an alternative syntax to assert on child arrays:
 
 {% highlight php %}
 <?php
@@ -79,7 +77,7 @@ Just choose the one you prefer and fits the best to your needs.
 
 ### `castToArray` and `iterator` asserters
 
-It is also now possible to assert on iterators thanks to a dedicated `iterator` asserter:
+This is now possible to assert on iterators thanks to a dedicated `iterator` asserter group:
 
 {% highlight php %}
 <?php
@@ -92,28 +90,28 @@ $this
 ;
 {% endhighlight %}
 
-This asserter will only check that the value it gets implements the iterator interface and will allow you to use a 
-single `hasSize` assertion as iterators can't be randomly accessed.
+This asserter will only check that the subject value implements the `Iterator` interface and will allow you to use a 
+single `hasSize` assertion as regular iterators can't be randomly accessed.
 
-`castToArray` to th rescue: this new asserter will let you cast any value to an array to assert on it. This is very usefull
+`castToArray` to the rescue: This new asserter will let you cast any value to an array to assert on it. This is very usefull
 with iterators:
 
 {% highlight php %}
 <?php
 
-this
+$this
     ->castToArray($iterator)
         ->hasSize(5)
         ->object[0]->isInstanceOf('stdClass')
 ;
 {% endhighlight %}
 
-There is also a shortcut method to cast any `iterator` or `string` asserter to an array:
+There is also a `toArray` shortcut method to cast any `iterator` or `string` asserter group to an array:
 
 {% highlight php %}
 <?php
 
-this
+$this
     ->iterator($iterator)
         ->hasSize(5)
         ->toArray
@@ -127,18 +125,37 @@ this
 
 ### `resource` asserter
 
-The `resource` asserter group provides useful asserters to check resources' types. For instance, 
-`->resource($var)->isOfType('stream')` is true if the resource `$var` is a stream. In many cases, we can use the `is*` 
-magic methods as a replacement of `isOfType`. Thus, `->resource($var)->isStream()` is strictly equivalent.
+The `resource` asserter group provides useful asserters to check resources' types. For instance:
+{% highlight php %}
+<?php
+
+$this
+    ->resource($var)
+        ->isOfType('stream')
+;
+{% endhighlight %}
+
+is true if the resource `$var` is a stream. In many cases, we can use the `is*` 
+magic methods as a replacement of `isOfType`. Thus:
+{% highlight php %}
+<?php
+
+$this
+    ->resource($var)
+        ->isStream()
+;
+{% endhighlight %}
+
+is strictly equivalent.
 
 Finally, if you would like more thinner asserters on the type of the resource, you can use `->resource($var)->type->…` 
 where `type` returns a `string` asserter group.
 
-Discover all the available resources in PHP: [http://php.net/resource][php_resources]
+Discover all the available resources in PHP at [http://php.net/resource][php_resources].
 
 ### Improvements on mock
 
-Mock generator has also been updated to support variadic arguments pass by reference. Method declared with such arguments
+Mock generator has been updated to support variadic arguments passed by reference. Method declared with such arguments
 will be correctly mocked.
 
 Another interesting feature around mocks is the automatic mock generation and injection. When you wanted to use mocks
@@ -183,16 +200,16 @@ mocks for its arguments ad inject them automatically.
 
 ### Stubs
 
-atoum [stubs][stubs] have also been updated according to the features introduced in this release. Don't forget to add
-them to your `composer.json` if you want to have a better IDE integration (autocompletion, ...).
+atoum [stubs][stubs] has been updated according to the features introduced in this release. Don't forget to add
+them to your `composer.json` if you want to have a better IDE integration (like autocompletion).
 
 ### Extensions
 
-Some extensions have also been updated:
+Some extensions has been updated:
 
 * The [deprecated-extension][deprecated_extension] has been published,
 * The [blackfire-extension][blackfire_extension] has been published,
-* The [ruler-extension][ruler_extension] has been updated with 4 new features, see the [changelog][ruler_extension_changelog].
+* The [ruler-extension][ruler_extension] has been updated with 4 new features, see the [changelog][ruler_extension_changelog].
 
 Thanks [Adrien Gallou][@agallou] for the amazing work he did on those extensions!
 
@@ -202,10 +219,10 @@ We also updated missing parts of the documentation. Again, [Adrien Gallou][@agal
 
 ## Links
 
-* [Milestone][milestone]
-* [Release][release]
-* [Changelog][changelog]
-* [Commits][commits]
+* [Milestone][milestone],
+* [Release][release],
+* [Changelog][changelog],
+* [Commits][commits].
 
 [milestone]: https://github.com/atoum/atoum/issues?q=milestone%3A2.5.0+is%3Aclosed
 [release]: https://github.com/atoum/atoum/releases/tag/2.5.0
