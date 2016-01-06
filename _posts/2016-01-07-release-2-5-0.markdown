@@ -8,23 +8,197 @@ categories: release
 
 ## Stats
 
-* 39 commits
+* 45 commits
 * 69 files changed
-* 5 contributors
-* 6 new features
+* 6 contributors
+* 8 new features
 * 3 bug fixes
 
 ## What's new
 
 ### Asserting on child arrays
 
+Asserting on arrays has just become a bit more awesome. 
+
+Remember when you wanted to assert on child arrays, you had to do things like:
+
+{% highlight php %}
+<?php 
+
+$array = [
+    'foo',
+    42,
+    'baz' => [
+        'boo'
+    ]
+];
+
+$this
+    ->array($array)
+        ->string[0]-isEqualTo('foo')
+        ->integer[1]-isEqualTo(42)
+        ->hasKey('baz')
+    ->array($array['baz'])
+        ->string[0]->isEqualTo('boo')
+;
+{% endhighlight %}
+
+The chain was broken because you were not able to easily assert on child arrays. With this new release, atoum brings a
+new helper method to do this:
+
+{% highlight php %}
+<?php
+
+$this
+    ->array($array)
+        ->string[0]-isEqualTo('foo')
+        ->integer[1]-isEqualTo(42)
+        ->child['baz'](function($child) {
+                $child->string[0]->isEqualTo('boo');
+            }
+        )
+    ->array($array['baz'])
+        ->string[0]->isEqualTo('boo')
+;
+{% endhighlight %}
+
+atoum has also always provided another syntax to assert on child arrays:
+
+{% highlight php %}
+<?php
+
+$this
+    ->array($array)
+        ->string[0]-isEqualTo('foo')
+        ->integer[1]-isEqualTo(42)
+        ->string['baz'][0]->isEqualTo('boo')
+;
+{% endhighlight %}
+
+Just choose the one you prefer and fits the best to your needs.
+
 ### `castToArray` and `iterator` asserters
+
+It is also now possible to assert on iterators thanks to a dedicated `iterator` asserter:
+
+{% highlight php %}
+<?php
+
+$iterator = new \someIterator();
+
+$this
+    ->iterator($iterator)
+        ->hasSize(5)
+;
+{% endhighlight %}
+
+This asserter will only check that the value it gets implements the iterator interface and will allow you to use a 
+single `hasSize` assertion as iterators can't be randomly accessed.
+
+`castToArray` to th rescue: this new asserter will let you cast any value to an array to assert on it. This is very usefull
+with iterators:
+
+{% highlight php %}
+<?php
+
+this
+    ->castToArray($iterator)
+        ->hasSize(5)
+        ->object[0]->isInstanceOf('stdClass')
+;
+{% endhighlight %}
+
+There is also a shortcut method to cast any `iterator` or `string` asserter to an array:
+
+{% highlight php %}
+<?php
+
+this
+    ->iterator($iterator)
+        ->hasSize(5)
+        ->toArray
+            ->object[0]->isInstanceOf('stdClass')
+            
+    ->string('Hello World!')
+        ->toArray
+            ->string[0]->isEqualTo('H')
+;
+{% endhighlight %}
 
 ### `resource` asserter
 
-### Extension configuration
+The `resource` asserter group provides useful asserters to check resources' types. For instance, 
+`->resource($var)->isOfType('stream')` is true if the resource `$var` is a stream. In many cases, we can use the `is*` 
+magic methods as a replacement of `isOfType`. Thus, `->resource($var)->isStream()` is strictly equivalent.
 
-### Improvments on mock
+Finally, if you would like more thinner asserters on the type of the resource, you can use `->resource($var)->type->…` 
+where `type` returns a `string` asserter group.
+
+Discover all the available resources in PHP: [http://php.net/resource][php_resources]
+
+### Improvements on mock
+
+Mock generator has also been updated to support variadic arguments pass by reference. Method declared with such arguments
+will be correctly mocked.
+
+Another interesting feature around mocks is the automatic mock generation and injection. When you wanted to use mocks
+in a test, you had to do things like:
+ 
+{% highlight php %}
+<?php
+
+class cachingIterator extends atoum
+{
+    public function test__construct()
+    {
+        $this
+            ->given($iterator = new \mock\iterator())
+            ->then
+                ->object(new \cachingIterator($iterator))               
+        ;
+    }
+}
+{% endhighlight %}
+
+Now instead of manually generating the mock, you can ask atoum to do it for you:
+ 
+{% highlight php %}
+<?php
+
+class cachingIterator extends atoum
+{
+    public function test__construct(\iterator $iterator)
+    {
+        $this
+            ->object(new \cachingIterator($iterator))               
+        ;
+    }
+}
+{% endhighlight %}
+
+When you add type-hints to a test method (which is not associated with a data provider) atoum will automatically generate 
+mocks for its arguments ad inject them automatically.
+
+## Asides
+
+### Stubs
+
+atoum [stubs][stubs] have also been updated according to the features introduced in this release. Don't forget to add
+them to your `composer.json` if you want to have a better IDE integration (autocompletion, ...).
+
+### Extensions
+
+Some extensions have also been updated:
+
+* The [deprecated-extension][deprecated_extension] has been published,
+* The [blackfire-extension][blackfire_extension] has been published,
+* The [ruler-extension][ruler_extension] has been updated with 4 new features, see the [changelog][ruler_extension_changelog].
+
+Thanks [Adrien Gallou][@agallou] for the amazing work he did on those extensions!
+
+### Documentation
+
+We also updated missing parts of the documentation. Again, [Adrien Gallou][@agallou] and our two [doc masters][@doc] did an amazing job!
 
 ## Links
 
@@ -37,3 +211,10 @@ categories: release
 [release]: https://github.com/atoum/atoum/releases/tag/2.5.0
 [changelog]: https://github.com/atoum/atoum/blob/master/CHANGELOG.md#250---2016-01-07
 [commits]: https://github.com/atoum/atoum/compare/2.4.0...2.5.0
+[php_resources]: http://php.net/resource
+[stubs]: https://github.com/atoum/stubs
+[deprecated_extension]: https://github.com/atoum/deprecated-extension
+[blackfire_extension]: https://github.com/atoum/blackfire-extension
+[ruler_extension]: https://github.com/atoum/ruler-extension
+[@agallou]: https://github.com/agallou
+[@doc]: https://github.com/orgs/atoum/teams/docs
