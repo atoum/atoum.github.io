@@ -126,6 +126,7 @@ $this
 ### `resource` asserter
 
 The `resource` asserter group provides useful asserters to check resources' types. For instance:
+
 {% highlight php %}
 <?php
 
@@ -137,6 +138,7 @@ $this
 
 is true if the resource `$var` is a stream. In many cases, we can use the `is*` 
 magic methods as a replacement of `isOfType`. Thus:
+
 {% highlight php %}
 <?php
 
@@ -205,7 +207,7 @@ them to your `composer.json` if you want to have a better IDE integration (like 
 
 ### Extensions
 
-Some extensions has been updated:
+Some extensions have been updated:
 
 * The [deprecated-extension][deprecated_extension] has been published,
 * The [blackfire-extension][blackfire_extension] has been published,
