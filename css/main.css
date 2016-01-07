@@ -152,7 +152,7 @@ nav {
 
     @media all and (min-width: 800px) {
         nav ~ #body {
-            transform: translateX(200px);
+            margin-left: 200px;
         }
 
         #menu {
