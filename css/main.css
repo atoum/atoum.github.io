@@ -113,8 +113,12 @@ nav {
           background: rgba(227, 143, 113, .6);
       }
 
-      #nav-about {
+      #nav-posts {
           background: rgba(240, 178, 112, .6);
+      }
+
+      #nav-about {
+          background: rgba(252, 218, 186, .6);
       }
 
 #body { }
@@ -144,6 +148,20 @@ nav {
     nav[aria-selected='true'] ~ #body {
         transform: translateX(200px);
         -webkit-transform: translateX(200px);
+    }
+
+    @media all and (min-width: 800px) {
+        nav ~ #body {
+            transform: translateX(200px);
+        }
+
+        #menu {
+            transform: translateX(0px);
+        }
+
+        [aria-controls='menu'] {
+            display: none;
+        }
     }
 
 [aria-controls='menu'] {
