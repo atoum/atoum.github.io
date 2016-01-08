@@ -12,17 +12,17 @@ layout: static
     <h2>Contributors</h2>
 
     <div style="width: 9%; margin: 2rem auto; text-align: center">
-        <img src="https://avatars1.githubusercontent.com/u/457534?v=3&s=460" style="width: 100%"/>
-        <br/>
-        <a href="https://github.com/mageekguy">mageekguy</a> (author)
+        <a href="https://github.com/mageekguy">
+            <img src="https://avatars1.githubusercontent.com/u/457534?v=3&s=460" style="width: 100%" alt="mageekguy (author)" title="mageekguy (author)" />
+        </a>
     </div>
     
     <div class="avatars">
         {% for member in site.github.organization_members %}
         <div class="avatar">
-            <img src="{{ member.avatar_url }}"/>
-            <br/>
-            <a href="{{ member.html_url }}">{{ member.login }}</a>
+            <a href="{{ member.html_url }}">
+                <img src="{{ member.avatar_url }}" alt="{{ member.login }}" title="{{ member.login }}" />
+            </a>
         </div>
         {% endfor %}
     </div>
