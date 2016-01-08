@@ -2,7 +2,19 @@
 layout: static
 ---
 
-<h1>You re being redirected</h1>
-<p class="header__paragraph"><a href="{{ page.redirect }}">{{ page.redirect }}</a></p>
+<h1>You re being redirected...</h1>
+<p class="header__paragraph"><a href="{{ page.redirect }}" id="redirect_link">{{ page.redirect }}</a></p>
 
-<script>setTimeout(function() { location="{{ page.redirect }}"; }, 1000);</script>
+<script>
+    var hash = '';
+
+    if (location.hash) {
+        var link = document.getElementById("redirect_link");
+
+        hash = location.hash.substr(1);
+        link.setAttribute("href", link.getAttribute("href") + hash);
+        link.innerText = link.innerText + hash;
+    }
+
+    setTimeout(function() { location="{{ page.redirect }}" + hash; }, 1000);
+</script>

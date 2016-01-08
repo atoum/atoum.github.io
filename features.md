@@ -17,7 +17,7 @@ Test suites, test cases, directory names… feel free to rename everything to fi
 <section class="visual-section">
 ## Execution engines
 
-By default, atoum provides three <a href="http://docs.atoum.org/en/latest/written_help.html#execution-engine">execution engines</a>:
+By default, atoum provides three [execution engines][execution-engine]:
 
 <ul class="bare block-list">
     <li style="max-width: 25%">
@@ -91,8 +91,8 @@ In the later example, the `given`, `when` and `then` keywords are “empty asser
 <section class="visual-section">
 ## Meaningful asserters
 
-atoum provides a <a href="http://docs.atoum.org/en/latest/asserters.html">full-featured set of natural and
-expressive assertions</a> making test cases as much readable as possible. The following example asserts the integer
+atoum provides a [full-featured set of natural and
+expressive assertions][asserters] making test cases as much readable as possible. The following example asserts the integer
 `150` is greater than `100` and lower than or equal to `200`:
 
 {% highlight php %}
@@ -105,7 +105,7 @@ $this
 {% endhighlight %}
 
 The following example asserts that `1 - 0.97` is nearly equal to `0.03` (which is
-<a href="http://www.floating-point-gui.de/errors/comparison/">strictly false in Computer Science</a>):
+[strictly false in Computer Science][float-comparison]):
 
 {% highlight php %}
 <?php
@@ -143,7 +143,7 @@ $this->calling($mockedObject)->methodBaz = function ($x) {
 {% endhighlight %}
 
 * **Functions**, by using the `function` “asserter”; the following example will mock the
-  <a href="http://php.net/session_start">`session_start`</a> PHP function and will provide a new implementation:
+  [`session_start`][session_start] PHP function and will provide a new implementation:
 
 {% highlight php %}
 <?php
@@ -154,7 +154,7 @@ $this->function->session_start = function () {
 {% endhighlight %}
 
 * **Constants**, by using the `constant` “asserter”; the following example will mock the
-  <a href="http://php.net/phpversion">`PHP_VERSION_ID`</a> constant and will provide a new value:
+  [`PHP_VERSION_ID`][phpversion] constant and will provide a new value:
 
 {% highlight php %}
 <?php
@@ -195,14 +195,14 @@ Either test suites are run by one single user, or by a continous integration ser
 in the latter), having test reports is crucial to understand failures, regressions, performances etc. That's why atoum
 is able to produce several reports like:
 
-* <a href="http://testanything.org/">TAP</a>, the Test Anything Protocol, a language agnostic format,
-* <a href="https://confluence.atlassian.com/display/CLOVER/Clover+Documentation+Home">clover</a>, a software and a
+* [TAP][tap], the Test Anything Protocol, a language agnostic format,
+* [clover], a software and a
   format for test reports,
-* <a href="https://wiki.jenkins-ci.org/display/JENKINS/xUnit+Plugin">xUnit</a>, a Jenkins plugin and a format for test
+* [xUnit][xunit], a Jenkins plugin and a format for test
   reports,
 * Your own, yes, this is really easy to plug your own reporter.
 
-Whatever you are using <a href="https://jenkins-ci.org/">Jenkins</a>, <a href="https://travis-ci.org/">Travis</a> or any
+Whatever you are using [Jenkins][jenkins], [Travis][travis] or any
 other well-known softwares, they are likely to understand atoum.
 </section>
 
@@ -258,20 +258,19 @@ Note the global `$script` and `$runner` variables: reach any part of atoum to fi
 atoum integrates well with the following non-exhaustive softwares or services:
 
 <ul class="columns" data-columns="3" style="margin: 0 auto; max-width: 500px">
-    <li><a href="https://atom.io/">Atom</a>,</li>
-    <li><a href="https://circleci.com/">Circle CI</a>,</li>
-    <li><a href="https://getcomposer.org/">Composer</a>,</li>
-    <li><a href="http://portablegvim.sourceforge.net/">GVim</a>,</li>
-    <li><a href="https://jenkins-ci.org/">Jenkins</a>,</li>
-    <li><a href="https://maven.apache.org/">Maven</a>,</li>
-    <li><a href="https://www.jetbrains.com/phpstorm/">PHPStorm</a>,</li>
-    <li><a href="http://www.phing.info/">Phing</a>,</li>
-    <li><a href="https://scrutinizer-ci.com/">Scrutinizer CI</a>,</li>
-    <li><a href="http://www.sublimetext.com/">Sublime Text</a>,</li>
-    <li><a href="https://travis-ci.org/">Travis CI</a>,</li>
-    <li><a href="http://www.vim.org/">Vim</a>,</li>
-    <li><a href="https://wiki.gnome.org/Apps/Gedit">gedit</a>,</li>
-    <li><a href="https://github.com/macvim-dev/macvim">macvim</a>.</li>
+    <li>[Atom][atom],</li>
+    <li>[Circle CI][circleci],</li>
+    <li>[Composer][composer],</li>
+    <li>[GVim][gvim],</li>
+    <li>[Jenkins][jenkins],</li>
+    <li>[PHPStorm][phpstorm],</li>
+    <li>[Phing][phing],</li>
+    <li>[Scrutinizer CI][scrutinizer],</li>
+    <li>[Sublime Text][sublimetext],</li>
+    <li>[Travis CI][travis],</li>
+    <li>[Vim][vim],</li>
+    <li>[gedit],</li>
+    <li>[macvim].</li>
 </ul>
 </section>
 
@@ -280,7 +279,7 @@ atoum integrates well with the following non-exhaustive softwares or services:
 
 First, atoum comes with a concurrent engine, which makes it fast (and secure) by default. Second, atoum is lightweight.
 For instance, the following table shows the time and memory required to run atoum's test suite and
-<a href="http://hoa-project.net/">Hoa</a>'s test suite, which are known to be important and intensive, both in terms of
+[Hoa][hoa]'s test suite, which are known to be important and intensive, both in terms of
 computation and memory:
 
 <table style="max-width: 500px">
@@ -329,16 +328,16 @@ computation and memory:
 atoum is extensible. The community writes extensions and the organization of atoum hosts and maintains some of them,
 like:
 
-* <a href="https://github.com/atoum/bdd-extension"><code>atoum/bdd-extension</code></a>, to write BDD-like test cases,
-* <a href="https://github.com/atoum/reports-extension"><code>atoum/reports-extension</code></a>, to write code coverage
+* [`atoum/bdd-extension`][bdd-extension], to write BDD-like test cases,
+* [`atoum/reports-extension`][reports-extension], to write code coverage
   reports (showing branch and path coverage on the code or on the control flow graph),
-* <a href="https://github.com/atoum/ruler-extension"><code>atoum/ruler-extension</code></a>, to precisely filter test
+* [`atoum/ruler-extension`][ruler-extension], to precisely filter test
   cases to run with a “natural language”,
-* <a href="https://github.com/atoum/json-schema-extension"><code>atoum/json-schema-extension</code></a>, to validate
+* [`atoum/json-schema-extension`][json-schema-extension], to validate
   JSON documents with new asserters,
-* <a href="https://github.com/atoum/visibility-extension"><code>atoum/visibility-extension</code></a>, to bypass the
+* [`atoum/visibility-extension`][visibility-extension], to bypass the
   visibility of methods.
-* <a href="https://github.com/atoum/blackfire-extension"><code>atoum/blackfire-extension</code></a>, to write your Blackfire test suites with atoum,
+* [`atoum/blackfire-extension`][blackfire-extension], to write your Blackfire test suites with atoum,
 
 Most of the time, to install an extension you will just need to include it in your dependencies and add one line in your
 configuration file, like:
@@ -350,3 +349,32 @@ $extension = new mageekguy\atoum\ruler\extension()
 $extension->addToRunner($runner);
 {% endhighlight %}
 </section>
+
+[execution-engine]: http://docs.atoum.org/en/latest/written_help.html#execution-engine
+[asserters]: http://docs.atoum.org/en/latest/asserters.html
+[float-comparison]: http://www.floating-point-gui.de/errors/comparison/
+[session_start]: http://php.net/session_start
+[phpversion]: http://php.net/phpversion
+[tap]: http://testanything.org/
+[clover]: https://confluence.atlassian.com/display/CLOVER/Clover+Documentation+Home
+[xunit]: https://wiki.jenkins-ci.org/display/JENKINS/xUnit+Plugin
+[jenkins]: https://jenkins-ci.org/
+[travis]: https://travis-ci.org/
+[hoa]: http://hoa-project.net/
+[atom]: https://atom.io/
+[circleci]: https://circleci.com/
+[composer]: https://getcomposer.org/
+[gvim]: http://portablegvim.sourceforge.net/
+[phpstorm]: https://www.jetbrains.com/phpstorm/
+[phing]: http://www.phing.info/
+[vim]: http://www.vim.org/
+[scrutinizer]: https://scrutinizer-ci.com/
+[sublimetext]: http://www.sublimetext.com/
+[gedit]: https://wiki.gnome.org/Apps/Gedit
+[macvim]: https://github.com/macvim-dev/macvim
+[bdd-extension]: /atoum/#/bdd-extension
+[reports-extension]: /atoum/#/reports-extension
+[ruler-extension]: /atoum/#/ruler-extension
+[json-schema-extension]: /atoum/#/json-schema-extension
+[visibility-extension]: /atoum/#/visibility-extension
+[blackfire-extension]: /atoum/#/blackfire-extension

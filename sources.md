@@ -9,13 +9,11 @@ layout: static
 <section class="visual-section">
 ## Release process
 
-Historically, atoum is a <a href="https://en.wikipedia.org/wiki/Rolling_release">rolling-release</a> software, it means
-without any versions. While this is very challenging because no regression must be introduced, this is not always
-comfortable for atoum's users that need versions, especially with a quality tool. That's why atoum uses
-<a href="http://www.semver.org/">the semantic versioning specification</a> too.
+Historically, atoum is a [rolling-release] software, it means without any versions. While this is very challenging 
+because no regression must be introduced, this is not always comfortable for atoum's users that need versions, 
+especially with a quality tool. That's why atoum uses [the semantic versioning specification][semver] too.
 
-You can see the <a href="https://github.com/atoum/atoum/releases/latest">latest atoum's version</a>. A
-<a href="https://github.com/atoum/atoum/blob/master/CHANGELOG.md">`CHANGELOG.md` file</a> is kept up-to-date.
+You can see the [latest atoum's version][release]. A [`CHANGELOG.md` file][changelog] is kept up-to-date.
 
 atoum has 2 release managers. They apply the following rules:
 
@@ -26,16 +24,16 @@ atoum has 2 release managers. They apply the following rules:
 
 Current release managers have been elected by the community and they are:
 
-* <a href="https://github.com/Hywan">Ivan Enderlin</a>,
-* <a href="https://github.com/mikaelrandy">Mikaël Randy</a>.
+* [Ivan Enderlin][@Hywan],
+* [Mikaël Randy][@mikaelrandy].
 </section>
 
 <section class="visual-section">
 ## Install with Composer
 
-The <a href="https://getcomposer.org/">Composer</a> tool is a dependency manager. All atoum's projects are registered on
-<a href="https://packagist.org/search/?q=atoum/">Packagist</a> repository under the names <code>atoum/<em>project</em></code>. Thus, the
-test framework is registered under `atoum/atoum` and extensions are registered under <code>atoum/<em>extension-name</em>-extension</code>.
+The [Composer][composer] tool is a dependency manager. All atoum's projects are registered on [Packagist][packagist] 
+repository under the names <code>atoum/<em>project</em></code>. Thus, the test framework is registered under 
+`atoum/atoum` and extensions are registered under <code>atoum/<em>extension-name</em>-extension</code>.
 Consequently, assuming Composer is already installed, we need to write the following content in a `composer.json` file:
 
 {% highlight json %}
@@ -88,14 +86,13 @@ The first line will print the version of atoum.
 <section class="visual-section">
 ## Install with a PHAR
 
-PHP provides a <a href="http://php.net/phar">PHAR</a> file format, which is an executable archive likely to contain PHP
+PHP provides a [PHAR][php-phar] file format, which is an executable archive likely to contain PHP
 code. atoum can be used inside a PHAR file.
 
-It is possible to <a href="https://github.com/atoum/atoum/releases/download/2.3.0/atoum.phar">download the latest PHAR
-ball</a> manually or to install it with <a href="http://curl.haxx.se/">cURL</a> by running:
+It is possible to [download the latest PHAR ball][release-phar] manually or to install it with [cURL][curl] by running:
 
 {% highlight sh %}
-$ curl -L https://github.com/atoum/atoum/releases/download/2.3.0/atoum.phar > /usr/local/bin/atoum.phar
+$ curl -L https://github.com/atoum/atoum/releases/download/2.5.0/atoum.phar > /usr/local/bin/atoum.phar
 {% endhighlight %}
 
 Finally, to update atoum, simply run:
@@ -110,8 +107,23 @@ Note the `-dphar.readonly=0` option to make the PHAR writable for this execution
 <section class="visual-section">
 ## Repositories
 
-atoum is using <a href="http://git-scm.com/">Git</a>. <a href="https://github.com/atoum/atoum">Repositories are hosted
-on Github</a> under the eponym organization: atoum.
+atoum is using [Git][git]. [Repositories are hosted on Github][atoum-repo-gh] under the eponym organization: 
+[atoum][[atoum-org-gh]].
 
 Github is used to manage and track bugs, issues, roadmap etc. If you would like to report a bug, this will happen there.
 </section>
+
+[release]: /atoum/atoum/#/releases/latest
+[changelog]: /atoum/atoum/#/blob/master/CHANGELOG.md
+[@Hywan]: https://github.com/Hywan
+[@mikaelrandy]: https://github.com/mikaelrandy
+[composer]: https://getcomposer.org/
+[packagist]: https://packagist.org/search/?q=atoum/
+[php-phar]: http://php.net/phar
+[git]: http://git-scm.com/
+[atoum-repo-gh]: /atoum/atoum
+[atoum-org-gh]: /atoum
+[release-phar]: /atoum/atoum/#/releases/download/2.5.0/atoum.phar
+[curl]: http://curl.haxx.se/
+[rolling-release]: https://en.wikipedia.org/wiki/Rolling_release
+[semver]: http://www.semver.org/
