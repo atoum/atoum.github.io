@@ -45,7 +45,8 @@ Using the concurrent engine will provide a faster feedback, this will accelerate
 <section class="visual-section">
 ## Vocabulary
 
-Depending of the kind of tests we are making, there is several ways to write a test case. The “classic” (old) way is procedural:
+Depending of the kind of tests we are making, there is several ways to write a test case. The “classic” (old) way is 
+procedural:
 
 {% highlight php %}
 <?php
@@ -85,15 +86,15 @@ $this
             ->isEqualTo(3);
 {% endhighlight %}
 
-In the later example, the `given`, `when` and `then` keywords are “empty asserters”. They execute nothing. They are used to provide a better test case design.
+In the later example, the `given`, `when` and `then` keywords are “empty asserters”. They execute nothing. They are used 
+to provide a better test case design.
 </section>
 
 <section class="visual-section">
 ## Meaningful asserters
 
-atoum provides a [full-featured set of natural and
-expressive assertions][asserters] making test cases as much readable as possible. The following example asserts the integer
-`150` is greater than `100` and lower than or equal to `200`:
+atoum provides a [full-featured set of natural and expressive assertions][asserters] making test cases as much readable 
+as possible. The following example asserts the integer `150` is greater than `100` and lower than or equal to `200`:
 
 {% highlight php %}
 <?php
@@ -278,9 +279,8 @@ atoum integrates well with the following non-exhaustive softwares or services:
 ## Fast
 
 First, atoum comes with a concurrent engine, which makes it fast (and secure) by default. Second, atoum is lightweight.
-For instance, the following table shows the time and memory required to run atoum's test suite and
-[Hoa][hoa]'s test suite, which are known to be important and intensive, both in terms of
-computation and memory:
+For instance, the following table shows the time and memory required to run atoum's test suite and [Hoa][hoa]'s test 
+suite, which are known to be important and intensive, both in terms of computation and memory:
 
 <table style="max-width: 500px">
     <caption>This table illustrates how fast atoum is by showing numbers about
@@ -329,15 +329,13 @@ atoum is extensible. The community writes extensions and the organization of ato
 like:
 
 * [`atoum/bdd-extension`][bdd-extension], to write BDD-like test cases,
-* [`atoum/reports-extension`][reports-extension], to write code coverage
-  reports (showing branch and path coverage on the code or on the control flow graph),
-* [`atoum/ruler-extension`][ruler-extension], to precisely filter test
-  cases to run with a “natural language”,
-* [`atoum/json-schema-extension`][json-schema-extension], to validate
-  JSON documents with new asserters,
-* [`atoum/visibility-extension`][visibility-extension], to bypass the
-  visibility of methods.
+* [`atoum/reports-extension`][reports-extension], to write code coverage reports (showing branch and path coverage on 
+  the code or on the control flow graph),
+* [`atoum/ruler-extension`][ruler-extension], to precisely filter test cases to run with a “natural language”,
+* [`atoum/json-schema-extension`][json-schema-extension], to validate JSON documents with new asserters,
+* [`atoum/visibility-extension`][visibility-extension], to bypass the visibility of methods,
 * [`atoum/blackfire-extension`][blackfire-extension], to write your Blackfire test suites with atoum,
+* [`atoum/deprecated-extension`][deprecated-extension], to get a report on deprecation notices.
 
 Most of the time, to install an extension you will just need to include it in your dependencies and add one line in your
 configuration file, like:
@@ -378,3 +376,4 @@ $extension->addToRunner($runner);
 [json-schema-extension]: /atoum/#/json-schema-extension
 [visibility-extension]: /atoum/#/visibility-extension
 [blackfire-extension]: /atoum/#/blackfire-extension
+[deprecated-extension]: /atoum/#/deprecated-extension
