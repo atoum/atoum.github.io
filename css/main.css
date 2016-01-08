@@ -98,19 +98,19 @@ nav {
       }
 
       #nav-features {
-          background: rgba(111, 95, 93, .6);
-      }
-
-      #nav-source {
           background: rgba(131, 93, 91, .6);
       }
 
-      #nav-documentation {
+      #nav-source {
           background: rgba(162, 107, 97, .6);
       }
 
-      #nav-community {
+      #nav-documentation {
           background: rgba(227, 143, 113, .6);
+      }
+
+      #nav-community {
+          background: rgba(252, 218, 186, .6);
       }
 
       #nav-posts {
@@ -118,7 +118,7 @@ nav {
       }
 
       #nav-about {
-          background: rgba(252, 218, 186, .6);
+          background: rgba(111, 95, 93, .6);
       }
 
 #body { }
