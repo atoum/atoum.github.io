@@ -338,6 +338,7 @@ like:
   JSON documents with new asserters,
 * <a href="https://github.com/atoum/visibility-extension"><code>atoum/visibility-extension</code></a>, to bypass the
   visibility of methods.
+* <a href="https://github.com/atoum/blackfire-extension"><code>atoum/blackfire-extension</code></a>, to write your Blackfire test suites with atoum,
 
 Most of the time, to install an extension you will just need to include it in your dependencies and add one line in your
 configuration file, like:
