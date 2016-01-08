@@ -201,7 +201,7 @@ mocks for its arguments ad inject them automatically.
 atoum has always provided a simple and nice way of generating mocks: you simply have to instanciate a class with top-namespace `mock\`. Some users don't like this so we added a new helper method on test classes:
 
 {% highlight php %}
-$mock = $this->newMockInstance('cachingIterator`);
+$mock = $this->newMockInstance('cachingIterator');
 {% endhighlight %}
 
 Of course, this method provides the exatc same features as the previous one: you can mock concrete classes, abstract classes and interfaces.
