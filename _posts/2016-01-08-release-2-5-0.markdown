@@ -33,8 +33,8 @@ $array = [
 
 $this
     ->array($array)
-        ->string[0]-isEqualTo('foo')
-        ->integer[1]-isEqualTo(42)
+        ->string[0]->isEqualTo('foo')
+        ->integer[1]->isEqualTo(42)
         ->hasKey('baz')
     ->array($array['baz'])
         ->string[0]->isEqualTo('boo')
@@ -49,8 +49,8 @@ new helper method to do this:
 
 $this
     ->array($array)
-        ->string[0]-isEqualTo('foo')
-        ->integer[1]-isEqualTo(42)
+        ->string[0]->isEqualTo('foo')
+        ->integer[1]->isEqualTo(42)
         ->child['baz'](function($child) {
                 $child->string[0]->isEqualTo('boo');
             }
@@ -67,8 +67,8 @@ You might also know that atoum provides an alternative syntax to assert on child
 
 $this
     ->array($array)
-        ->string[0]-isEqualTo('foo')
-        ->integer[1]-isEqualTo(42)
+        ->string[0]->isEqualTo('foo')
+        ->integer[1]->isEqualTo(42)
         ->string['baz'][0]->isEqualTo('boo')
 ;
 {% endhighlight %}
@@ -235,5 +235,6 @@ We also updated missing parts of the documentation. Again, [Adrien Gallou][@agal
 [deprecated_extension]: https://github.com/atoum/deprecated-extension
 [blackfire_extension]: https://github.com/atoum/blackfire-extension
 [ruler_extension]: https://github.com/atoum/ruler-extension
+[ruler_extension_changelog]: https://github.com/atoum/ruler-extension/blob/master/CHANGELOG.md
 [@agallou]: https://github.com/agallou
 [@doc]: https://github.com/orgs/atoum/teams/docs
