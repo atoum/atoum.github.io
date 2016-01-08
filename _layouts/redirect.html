@@ -1,0 +1,8 @@
+---
+layout: static
+---
+
+<h1>You re being redirected</h1>
+<p class="header__paragraph"><a href="{{ page.redirect }}">{{ page.redirect }}</a></p>
+
+<script>setTimeout(function() { location="{{ page.redirect }}"; }, 1000);</script>
