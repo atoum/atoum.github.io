@@ -3,6 +3,6 @@ layout: static
 ---
 
 <h1>{{ page.title }}</h1>
-<p class="header__paragraph">{{ page.date | date_to_string }}</p>
+<p class="header__paragraph">{{ page.author }} - {{ page.date | date_to_string }}</p>
 
 <section class="visual-section">{{ content }}</section>
