@@ -256,23 +256,68 @@ Note the global `$script` and `$runner` variables: reach any part of atoum to fi
 <section class="visual-section">
 ## Third-party integration
 
-atoum integrates well with the following non-exhaustive softwares or services:
-
-<ul class="columns" data-columns="3" style="margin: 0 auto; max-width: 500px">
-    <li>[Atom][atom],</li>
-    <li>[Circle CI][circleci],</li>
-    <li>[Composer][composer],</li>
-    <li>[GVim][gvim],</li>
-    <li>[Jenkins][jenkins],</li>
-    <li>[PHPStorm][phpstorm],</li>
-    <li>[Phing][phing],</li>
-    <li>[Scrutinizer CI][scrutinizer],</li>
-    <li>[Sublime Text][sublimetext],</li>
-    <li>[Travis CI][travis],</li>
-    <li>[Vim][vim],</li>
-    <li>[gedit],</li>
-    <li>[macvim].</li>
+atoum integrates well with those CI tools:
+<ul class="columns integrations" data-columns="3">
+    <li>
+       <img src="images/integrations_logos/travis-ci.svg" />
+       <a href="https://travis-ci.org/">Travis CI</a>
+       <a href="http://docs.atoum.org/en/latest/cookbook.html#use-with-travis-ci" class="integration__doc-link">(see how)</a>
+    </li>
+    <li>
+       <img src="images/integrations_logos/jenkins.png" />
+       <a href="https://jenkins-ci.org/">Jenkins</a>
+       <a href="http://docs.atoum.org/en/latest/cookbook.html#use-inside-jenkins-or-hudson" class="integration__doc-link">(see how)</a>
+    </li>
+    <li>
+       <img src="images/integrations_logos/circleci.png" />
+       <a href="https://circleci.com/">Circle CI</a>
+    </li>
 </ul>
+
+atoum has a **GREAT** integration with those IDEs:
+<ul class="columns integrations" data-columns="3">
+    <li>
+      <img src="images/integrations_logos/atom.png" />
+      <a href="https://atom.io/">Atom</a>
+      <a href="https://github.com/atoum/atom-plugin" class="integration__doc-link">(see how)</a>
+    </li>
+    <li>
+       <img src="images/integrations_logos/sublime-text.png" />
+       <a href="http://www.sublimetext.com/">Sublime Text</a>
+       <a href="http://docs.atoum.org/en/latest/ide.html#sublime-text-2" class="integration__doc-link">(see how)</a>
+    </li>
+    <li>
+       <img src="images/integrations_logos/netbeans.gif" />
+       <a href="http://www.sublimetext.com/">NetBeans</a>
+       <a href="http://docs.atoum.org/en/latest/ide.html#sublime-text-2" class="integration__doc-link">(see how)</a>
+    </li>
+</ul>
+
+but atoum also plays well with:
+<ul>
+    <li><a href="https://www.jetbrains.com/phpstorm/">PHPStorm</a> <a href="http://docs.atoum.org/en/latest/ide._2html#phpstorm" class="integration__doc-link">(see how)</a></li>
+    <li><a href="http://www.vim.org/">Vim</a> <a href="http://docs.atoum.org/en/latest/ide.html#vim" class="integration__doc-link">(see how)</a></li>
+    <li><a href="https://github.com/macvim-dev/macvim">macvim</a> <a href="http://docs.atoum.org/en/latest/ide.html#macvim" class="integration__doc-link">(see how)</a></li>
+    <li><a href="http://portablegvim.sourceforge.net/">GVim</a> <a href="http://docs.atoum.org/en/latest/ide.html#gvim" class="integration__doc-link">(see how)</a></li>
+    <li><a href="https://wiki.gnome.org/Apps/Gedit">gedit</a> <a href="http://docs.atoum.org/en/latest/ide.html#gedit" class="integration__doc-link">(see how)</a></li>
+</ul>
+
+You can also use atoum with your regular build tools and/or dependancy manager:
+
+<ul class="columns integrations" data-columns="3">
+    <li>
+       <img src="images/integrations_logos/composer.png" />
+       <a href="https://getcomposer.org/">Composer</a>
+       <a href="http://docs.atoum.org/en/latest/getting_started.html#composer" class="integration__doc-link">(see how)</a>
+    </li>
+    <li>
+       <img src="images/integrations_logos/phing.png" />
+       <a href="http://www.phing.info/">Phing</a>
+       <a href="http://docs.atoum.org/en/latest/cookbook.html#step-3-launching-tests-via-jenkins-or-hudson" class="integration__doc-link">(see how)</a>
+    </li>
+
+</ul>
+
 </section>
 
 <section class="visual-section">
