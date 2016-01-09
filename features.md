@@ -264,12 +264,12 @@ atoum integrates well with those CI tools:
        <a href="http://docs.atoum.org/en/latest/cookbook.html#use-with-travis-ci" class="integration__doc-link">(see how)</a>
     </li>
     <li>
-       <img src="images/integrations_logos/jenkins.png" />
+       <img src="images/integrations_logos/jenkins.svg" />
        <a href="https://jenkins-ci.org/">Jenkins</a>
        <a href="http://docs.atoum.org/en/latest/cookbook.html#use-inside-jenkins-or-hudson" class="integration__doc-link">(see how)</a>
     </li>
     <li>
-       <img src="images/integrations_logos/circleci.png" />
+       <img src="images/integrations_logos/circleci.svg" />
        <a href="https://circleci.com/">Circle CI</a>
     </li>
 </ul>
@@ -277,17 +277,17 @@ atoum integrates well with those CI tools:
 atoum has a **GREAT** integration with those IDEs:
 <ul class="columns integrations" data-columns="3">
     <li>
-      <img src="images/integrations_logos/atom.png" />
+      <img src="images/integrations_logos/atom.svg" />
       <a href="https://atom.io/">Atom</a>
       <a href="https://github.com/atoum/atom-plugin" class="integration__doc-link">(see how)</a>
     </li>
     <li>
-       <img src="images/integrations_logos/sublime-text.png" />
+       <img src="images/integrations_logos/sublime-text.svg" />
        <a href="http://www.sublimetext.com/">Sublime Text</a>
        <a href="http://docs.atoum.org/en/latest/ide.html#sublime-text-2" class="integration__doc-link">(see how)</a>
     </li>
     <li>
-       <img src="images/integrations_logos/netbeans.gif" />
+       <img src="images/integrations_logos/netbeans.svg" />
        <a href="http://www.sublimetext.com/">NetBeans</a>
        <a href="http://docs.atoum.org/en/latest/ide.html#sublime-text-2" class="integration__doc-link">(see how)</a>
     </li>
@@ -306,12 +306,12 @@ You can also use atoum with your regular build tools and/or dependancy manager:
 
 <ul class="columns integrations" data-columns="3">
     <li>
-       <img src="images/integrations_logos/composer.png" />
+       <img src="images/integrations_logos/composer.svg" />
        <a href="https://getcomposer.org/">Composer</a>
        <a href="http://docs.atoum.org/en/latest/getting_started.html#composer" class="integration__doc-link">(see how)</a>
     </li>
     <li>
-       <img src="images/integrations_logos/phing.png" />
+       <img src="images/integrations_logos/phing.svg" />
        <a href="http://www.phing.info/">Phing</a>
        <a href="http://docs.atoum.org/en/latest/cookbook.html#step-3-launching-tests-via-jenkins-or-hudson" class="integration__doc-link">(see how)</a>
     </li>
