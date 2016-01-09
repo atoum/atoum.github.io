@@ -274,7 +274,7 @@ atoum integrates well with those CI tools:
     </li>
 </ul>
 
-atoum has a **GREAT** integration with those IDEs:
+atoum has a **great** integration with those IDEs:
 <ul class="columns integrations" data-columns="3">
     <li>
       <img src="images/integrations_logos/atom.svg" />
