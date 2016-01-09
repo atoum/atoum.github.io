@@ -506,3 +506,36 @@ table {
         border-radius: 1rem;
     }
 
+
+.integrations {
+  margin: 0 auto;
+  max-with:600px;
+}
+
+ul.integrations > li:before{
+  content: "";
+}
+
+.integrations li {
+  text-align: center;
+  margin: 0 0 25px 0;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+  min-height: 120px;
+}
+
+.integrations li a:after {
+  content:"\a";
+  white-space: pre;
+}
+
+.integrations li img {
+  max-height: 60px;
+  display: block;
+  margin: 0 auto 4px auto;
+}
+
+.integration__doc-link {
+  font-size: 80%;
+}
