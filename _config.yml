@@ -8,3 +8,15 @@ markdown: kramdown
 kramdown:
     parse_block_html: true
     parse_span_html: true
+
+gems:
+  - jekyll-mentions
+  - jemoji
+  - jekyll-sitemap
+  - jekyll-feed
+
+feed:
+  path: atom.xml
+
+jekyll-mentions:
+  base_url: https://github.com
