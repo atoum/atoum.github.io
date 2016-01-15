@@ -1,0 +1,22 @@
+@supports (pointer-events: none) {
+  #body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    min-height: 100vh;
+    height: 100%;
+    width: 100vw;
+    pointer-events: none;
+    opacity: 0;
+    background: #000;
+
+    transition: opacity 200ms ease-out;
+    -webkit-transition: opacity 200ms ease-out;
+  }
+
+  nav[aria-selected='true'] ~ #body::after {
+    pointer-events: auto;
+    opacity: .7;
+  }
+}
+

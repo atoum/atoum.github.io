@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font: 1.2em/1.5em Text;
+  color: #f5f2e7;
+  text-align: justify;
+  hyphens: auto;
+  min-height: 100%;
+  overflow-x: hidden;
+  background: url('../images/background.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+}
