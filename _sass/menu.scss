@@ -1,0 +1,101 @@
+nav {
+  position: fixed;
+  top: 0;
+  left: -50px;
+  height: 100vh;
+  width: 250px;
+  transform: translateX(-200px);
+  -webkit-transform: translateX(-200px);
+
+  &[aria-selected='true'] {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+
+    ~ #body {
+      transform: translateX(200px);
+      -webkit-transform: translateX(200px);
+    }
+
+    ~ [aria-controls='menu'] {
+      transform: rotate(45deg) translateZ(0);
+      -webkit-transform: rotate(405deg) translateZ(0);
+      margin-left: 210px;
+    }
+  }
+
+  > ul {
+    display: table;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+    > li {
+      display: table-row;
+
+      &::before {
+        content: '';
+      }
+
+      > a {
+        display: table-cell;
+        vertical-align: middle;
+        color: #f0e9dd;
+        font-variant: all-small-caps;
+        text-decoration: none;
+        padding-left: 50px;
+        cursor: pointer;
+
+        > img {
+          display: block;
+          width: 50px;
+          height: 50px;
+          margin: 0 auto;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}
+
+#nav-features {
+  background: rgba(131, 93, 91, .6);
+}
+
+#nav-source {
+  background: rgba(162, 107, 97, .6);
+}
+
+#nav-documentation {
+  background: rgba(227, 143, 113, .6);
+}
+
+#nav-community {
+  background: rgba(252, 218, 186, .6);
+}
+
+#nav-posts {
+  background: rgba(240, 178, 112, .6);
+}
+
+#nav-about {
+  background: rgba(111, 95, 93, .6);
+}
+
+[aria-controls='menu'] {
+  z-index: 1;
+  position: fixed;
+  top: 10px;
+  left: 0;
+  margin-left: 10px;
+  width: 2.5em;
+  height: 2.5em;
+  transform: rotate(-360deg) translateZ(0);
+  -webkit-transform: translateZ(0);
+
+  > svg circle,
+  > svg line {
+    fill: none;
+    stroke: #f5f2e7;
+    stroke-width: 4;
+  }
+}

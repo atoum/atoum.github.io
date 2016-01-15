@@ -257,7 +257,7 @@ Note the global `$script` and `$runner` variables: reach any part of atoum to fi
 ## Third-party integration
 
 atoum integrates well with those CI tools:
-<ul class="columns integrations" data-columns="3">
+<ul class="columns integrations bare" data-columns="3">
     <li>
        <img src="images/integrations_logos/travis-ci.svg" />
        <a href="https://travis-ci.org/">Travis CI</a>
@@ -275,7 +275,7 @@ atoum integrates well with those CI tools:
 </ul>
 
 atoum has a **great** integration with those IDEs:
-<ul class="columns integrations" data-columns="3">
+<ul class="columns integrations bare" data-columns="3">
     <li>
       <img src="images/integrations_logos/atom.svg" />
       <a href="https://atom.io/">Atom</a>
@@ -304,7 +304,7 @@ but atoum also plays well with:
 
 You can also use atoum with your regular build tools and/or dependancy manager:
 
-<ul class="columns integrations" data-columns="3">
+<ul class="columns integrations bare" data-columns="3">
     <li>
        <img src="images/integrations_logos/composer.svg" />
        <a href="https://getcomposer.org/">Composer</a>

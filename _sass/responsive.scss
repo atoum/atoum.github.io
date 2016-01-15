@@ -1,0 +1,41 @@
+@media all and (max-height: 450px) {
+  nav > ul > li > a > img {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-left: .5em;
+    float: left;
+  }
+}
+
+@media all and (min-width: 800px) {
+  nav ~ #body {
+    margin-left: 200px;
+  }
+
+  #menu {
+    transform: translateX(0px);
+  }
+
+  [aria-controls='menu'] {
+    display: none;
+  }
+}
+
+@media all and (max-width: 500px) {
+  ul:not(.bare) li {
+    margin-left: -1.3em;
+  }
+
+  ul:not(.bare) li li {
+    margin-left: -.25em;
+  }
+}
+
+@media all and (max-width: 799px) {
+  .columns[data-columns] {
+    columns: 1;
+    -moz-columns: 1;
+    -webkit-columns: 1;
+  }
+}

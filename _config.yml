@@ -3,6 +3,9 @@ highlighter: pygments
 timezone: Europe/Paris
 exclude:
   - docker-compose.yml
+  - vendor
+  - Gemfile
+  - Gemfile.lock
 
 markdown: kramdown
 kramdown:
@@ -14,9 +17,14 @@ gems:
   - jemoji
   - jekyll-sitemap
   - jekyll-feed
+  - jekyll-sass-converter
 
 feed:
   path: atom.xml
 
 jekyll-mentions:
   base_url: https://github.com
+
+sass:
+  sass_dir: _sass
+  style: compressed

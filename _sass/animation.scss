@@ -1,0 +1,6 @@
+nav, #body, [aria-controls='menu'] {
+  transition: 500ms cubic-bezier(.26, 1.59, .64, 1);
+  transition-property: transform, margin-left;
+  -webkit-transition: 500ms cubic-bezier(.26, 1.59, .64, 1);
+  -webkit-transition-property: -webkit-transform, margin-left;
+}

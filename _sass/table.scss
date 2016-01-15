@@ -1,0 +1,35 @@
+table {
+  margin: 1em auto;
+  width: 100%;
+  max-width: 80%;
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  thead tr:not(:first-child),
+  tbody tr {
+    border-top: 1px rgb(210, 197, 172) solid;
+
+    &.table--double-separator {
+      border-style: double;
+      border-width: 4px 0 0 0;
+    }
+  }
+
+  th {
+    vertical-align: bottom;
+  }
+
+  th,
+  td {
+    vertical-align: top;
+    padding: 0 1em;
+    line-height: 2em;
+  }
+
+  caption {
+    font-size: .8em;
+    line-height: 1.2em;
+    margin: 1em auto 0 auto;
+    caption-side: bottom;
+  }
+}

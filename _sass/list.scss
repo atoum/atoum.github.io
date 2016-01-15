@@ -1,0 +1,58 @@
+li {
+  position: relative;
+  list-style: none;
+
+  &::before {
+    position: absolute;
+    left: -1.3em;
+    cursor: default;
+    height: 100%;
+    width: 1.3em;
+    text-align: center;
+  }
+}
+
+ul {
+  &:not(.bare) {
+    li {
+      margin-left: 1em;
+    }
+
+    > li:before {
+      content: "•";
+    }
+
+    > li[data-item]::before {
+      content: attr(data-item);
+    }
+  }
+
+  &.inline {
+    padding: 0;
+
+    > li {
+      display: inline-block;
+      padding: 0;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+ol {
+  counter-reset: ol 0;
+
+  &:not(.bare) li {
+    margin-left: 1em;
+  }
+
+  > li {
+    counter-increment: ol;
+
+    &::before {
+      content: counter(ol);
+    }
+  }
+}
