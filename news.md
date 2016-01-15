@@ -1,5 +1,6 @@
 ---
 layout: static
+title: News
 ---
 
 <h1>News</h1>
