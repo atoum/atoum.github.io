@@ -562,6 +562,16 @@ ul.integrations > li:before{
         margin-top: -.4em;
         border-radius: 0 0 .5em .5em;
     }
+
+        .algolia-autocomplete .aa-dropdown-menu .branding {
+            text-align: right;
+            line-height: 20px;
+            padding: .5em .5em 0 0;
+        }
+            .algolia-autocomplete .aa-dropdown-menu .branding img {
+                height: 20px;
+            }
+
         .algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
             cursor: pointer;
             padding: 5px 4px;
