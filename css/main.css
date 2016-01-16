@@ -206,8 +206,6 @@ article {
     padding-bottom: 4em;
 }
 
-footer { }
-
 footer > p {
     font-size: .8em;
     text-align: center;
@@ -254,16 +252,14 @@ h1 {
     text-align: center;
 }
 
-h2 { }
+h2 > small {
+    color: #555;
+    font-size: 1em;
+}
 
-    h2 > small {
-        color: #555;
-        font-size: 1em;
-    }
-
-    .header__paragraph {
-        text-align: center;
-    }
+.header__paragraph {
+    text-align: center;
+}
 
 p {
     margin: 1em 0;
@@ -509,7 +505,7 @@ table {
 
 .integrations {
   margin: 0 auto;
-  max-with:600px;
+  max-width: 600px;
 }
 
 ul.integrations > li:before{
@@ -539,3 +535,44 @@ ul.integrations > li:before{
 .integration__doc-link {
   font-size: 80%;
 }
+
+.algolia-autocomplete {
+    width: 30rem;
+    margin: 0 auto;
+    display: block!important;
+}
+    .algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
+        font: 1.2em/1.5em Text;
+        width: 100%;
+        padding: .1em .5em;
+        outline: none !important;
+        box-shadow: none !important;
+        border: 1px solid rgba(111, 95, 93, .6);
+        vertical-align: middle!important;
+        color: rgb(157, 92, 87);
+        border-radius: .5em;
+    }
+
+    .algolia-autocomplete .aa-dropdown-menu {
+        width: 30rem;
+        text-align: left;
+        background-color: #fff;
+        border: 1px solid rgba(111, 95, 93, .6);
+        border-top: none;
+        margin-top: -.4em;
+        border-radius: 0 0 .5em .5em;
+    }
+        .algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
+            cursor: pointer;
+            padding: 5px 4px;
+            color: rgb(157, 92, 87);
+        }
+            .algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
+                background-color: #f5f2e7;
+            }
+
+            .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .algolia__result-highlight {
+                font-weight: bold;
+                font-style: normal;
+                color: #072066;
+            }
