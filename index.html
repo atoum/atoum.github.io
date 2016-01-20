@@ -16,21 +16,42 @@ title: atoum
   of the box</strong>:
 </p>
 
-<ul>
-  <li data-item="★">
-    <strong>Tests isolation</strong> and <strong>parallelization</strong> to
-    get better performances and avoid side-effects on tests,
-  </li>
-  <li data-item="★">
-    <strong>Full-features mock engine</strong>,
-  </li>
-  <li data-item="★">
-    <strong>Adapters</strong> to fake PHP functions,
-  </li>
-  <li data-item="★">
-    <strong>Virtual streams</strong> to mock filesystem,
-  </li>
-  <li data-item="★">
-    And many more!
-  </li>
-</ul>
+<section class="visual-section">
+  <ul>
+    <li data-item="★">
+      <strong>Tests isolation</strong> and <strong>parallelization</strong> to
+      get better performances and avoid side-effects on tests,
+    </li>
+    <li data-item="★">
+      <strong>Full-featured mock engine</strong>,
+    </li>
+    <li data-item="★">
+      <strong>Adapters</strong> to fake PHP functions,
+    </li>
+    <li data-item="★">
+      <strong>Virtual streams</strong> to mock filesystem,
+    </li>
+    <li data-item="★">
+      And many more!
+    </li>
+  </ul>
+</section>
+
+<section class="visual-section">
+  <h2>Use it</h2>
+
+  <p>Installing atoum in your project is as simple as that:</p>
+
+{% highlight sh %}
+composer require --dev 'atoum/atoum:*'
+
+vendor/bin/atoum -d tests/units
+{% endhighlight %}
+</section>
+
+<script>
+var release = new Release();
+release.getVersion().then(function(version) {
+  document.body.innerHTML = document.body.innerHTML.split("atoum/atoum:*").join("atoum/atoum:" + version);
+});
+</script>
