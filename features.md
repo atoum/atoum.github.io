@@ -276,7 +276,12 @@ atoum integrates well with those CI tools:
 </ul>
 
 atoum has a **great** integration with those IDEs:
-<ul class="columns integrations" data-columns="3">
+<ul class="columns integrations" data-columns="4">
+    <li>
+      <img src="images/integrations_logos/phpstorm.svg" />
+      <a href="https://www.jetbrains.com/phpstorm/">PhpStorm</a>
+      <a href="https://github.com/atoum/phpstorm-plugin" class="integration__doc-link">(see how)</a>
+    </li>
     <li>
       <img src="images/integrations_logos/atom.svg" />
       <a href="https://atom.io/">Atom</a>
@@ -296,7 +301,6 @@ atoum has a **great** integration with those IDEs:
 
 but atoum also plays well with:
 <ul>
-    <li><a href="https://www.jetbrains.com/phpstorm/">PHPStorm</a> <a href="http://docs.atoum.org/en/latest/ide._2html#phpstorm" class="integration__doc-link">(see how)</a></li>
     <li><a href="http://www.vim.org/">Vim</a> <a href="http://docs.atoum.org/en/latest/ide.html#vim" class="integration__doc-link">(see how)</a></li>
     <li><a href="https://github.com/macvim-dev/macvim">macvim</a> <a href="http://docs.atoum.org/en/latest/ide.html#macvim" class="integration__doc-link">(see how)</a></li>
     <li><a href="http://portablegvim.sourceforge.net/">GVim</a> <a href="http://docs.atoum.org/en/latest/ide.html#gvim" class="integration__doc-link">(see how)</a></li>
