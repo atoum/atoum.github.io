@@ -258,7 +258,7 @@ Note the global `$script` and `$runner` variables: reach any part of atoum to fi
 ## Third-party integration
 
 atoum integrates well with those CI tools:
-<ul class="columns integrations" data-columns="3">
+<ul class="columns integrations" data-columns="4">
     <li>
        <img src="images/integrations_logos/travis-ci.svg" />
        <a href="https://travis-ci.org/">Travis CI</a>
@@ -268,6 +268,11 @@ atoum integrates well with those CI tools:
        <img src="images/integrations_logos/jenkins.svg" />
        <a href="https://jenkins-ci.org/">Jenkins</a>
        <a href="http://docs.atoum.org/en/latest/cookbook.html#use-inside-jenkins-or-hudson" class="integration__doc-link">(see how)</a>
+    </li>
+    <li>
+       <img src="images/integrations_logos/gitlab.svg" />
+       <a href="https://about.gitlab.com/gitlab-ci/">GitLab CI</a>
+       <a href="http://doc.gitlab.com/ce/ci/languages/php.html#using-atoum" class="integration__doc-link">(see how)</a>
     </li>
     <li>
        <img src="images/integrations_logos/circleci.svg" />
