@@ -38,7 +38,7 @@ By default, atoum provides three [execution engines][execution-engine]:
     </li>
 </ul>
 
-A specific engine can be defined per test case in addition to a default one with the <code>@engine</code> annotation.
+A specific engine can be defined per test case in addition to a default one with the <code>&commat;engine</code> annotation.
 
 Using the concurrent engine will provide a faster feedback, this will accelerate your development.
 </section>

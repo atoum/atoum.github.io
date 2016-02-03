@@ -5,6 +5,14 @@ var Release = function() {
         })
         .then(function(body) {
             return JSON.parse(body);
+        })
+        .then(function(releases) {
+            return releases.sort(function(a, b) {
+                a = a.tag_name.replace(/\./g, '');
+                b = b.tag_name.replace(/\./g, '');
+
+                return parseInt(b, 10) - parseInt(a, 10);
+            });
         });
 
     var latest = releases.then(function(releases) {
