@@ -235,11 +235,11 @@ article > section > ul {
 
 .visual-section {
     margin-bottom: 1rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
 }
 
 .visual-section:nth-child(odd) {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
     background: rgba(255, 255, 255, .05);
 }
 
