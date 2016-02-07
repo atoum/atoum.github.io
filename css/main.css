@@ -228,7 +228,8 @@ article > section > h4,
 article > section > h5,
 article > section > h6,
 article > section > ol,
-article > section > ul {
+article > section > ul,
+article > section > blockquote {
     margin-left: 4rem;
     margin-right: 4rem;
 }
@@ -261,7 +262,7 @@ h2 > small {
     text-align: center;
 }
 
-p {
+p, blockquote {
     margin: 1em 0;
     clear: both;
 }
@@ -586,3 +587,7 @@ ul.integrations > li:before{
                 font-style: normal;
                 color: #072066;
             }
+
+blockquote cite::before {
+    content: "— ";
+}
