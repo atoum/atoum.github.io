@@ -29,6 +29,8 @@ composer require atoum/blackfire-extension
 Then we need to configure the client id and token to access blackfire. We do that by adding a few lines in the `.atoum.php` file. For example here is how to do it when those variable are accessible as environnement variables: 
 
 {% highlight php %}
+<?php
+
 $extension = new mageekguy\atoum\blackfire\extension();
 $extension
     ->setClientConfiguration(new \Blackfire\ClientConfiguration($_ENV['BLACKFIRE_CLIENT_ID'], $_ENV['BLACKFIRE_CLIENT_TOKEN']))
@@ -51,6 +53,7 @@ Let's take this test as an example:
 
 {% highlight php %}
 <?php
+
 namespace Tests\Units;
 
 use Example as TestedClass;
@@ -86,6 +89,7 @@ This a an example based on the execution time. You can define more usefull asser
 
 {% highlight php %}
 <?php
+
 namespace Tests\Units;
 
 use Example as TestedClass;
@@ -124,9 +128,9 @@ In order to only execute those tests, you can use the `extensions` tag ([read th
 
 For example, you can launch all the tests that do not need the blackfire php extension like this:
 
-```
+{% highlight bash %}
 ./vendor/bin/atoum -d tests --filter 'not(extensions contains "blackfire")'
-```
+{% endhighlight %}
 
 
 Last thoughts
