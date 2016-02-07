@@ -136,7 +136,7 @@ For example, you can launch all the tests that do not need the blackfire php ext
 Last thoughts
 -------------
 
-This extension requires a leat the version 2.5.0 of atoum : ([read the 2.5.0 announcement](http://atoum.org/release/2016/01/08/release-2-5-0.html)).
+This extension requires a least the version 2.5.0 of atoum : [read the 2.5.0 announcement](http://atoum.org/release/2016/01/08/release-2-5-0.html).
 
 A lot of [metric](https://blackfire.io/docs/reference-guide/metrics) and [variables](https://blackfire.io/docs/reference-guide/assertions) are available out of the box. As we saw previousely, you can define your own metric. So don't hesitate to add those assertions in your unit tests.
 
