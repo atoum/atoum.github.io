@@ -9,27 +9,27 @@ title: Community
     atoum's community is made of awesome people and tools.
 </p>
 
-<section class="visual-section">
-    <h2>Contributors</h2>
+<article>
+    <section class="visual-section">
+        <h2>Contributors</h2>
 
-    <div style="width: 9%; margin: 2rem auto; text-align: center">
-        <a href="https://github.com/mageekguy" class="bare">
-            <img src="https://avatars1.githubusercontent.com/u/457534?v=3&s=460" style="width: 100%" alt="mageekguy (author)" title="mageekguy (author)" />
-        </a>
-    </div>
-    
-    <div class="avatars">
-        {% for member in site.github.organization_members %}
-        <div class="avatar">
-            <a href="{{ member.html_url }}" class="bare">
-                <img src="{{ member.avatar_url }}" alt="{{ member.login }}" title="{{ member.login }}" />
+        <div style="width: 9%; margin: 2rem auto; text-align: center">
+            <a href="https://github.com/mageekguy" class="bare">
+                <img src="https://avatars1.githubusercontent.com/u/457534?v=3&s=460" style="width: 100%" alt="mageekguy (author)" title="mageekguy (author)" />
             </a>
         </div>
-        {% endfor %}
-    </div>
-</section>
 
-<article>
+        <div class="avatars">
+            {% for member in site.github.organization_members %}
+            <div class="avatar">
+                <a href="{{ member.html_url }}" class="bare">
+                    <img src="{{ member.avatar_url }}" alt="{{ member.login }}" title="{{ member.login }}" />
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
     <section class="visual-section">
         <h2>Quotes</h2>
 
