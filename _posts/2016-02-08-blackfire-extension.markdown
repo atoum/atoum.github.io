@@ -11,22 +11,22 @@ Intro
 
 Since the release of its [version 2](http://blog.blackfire.io/blackfire-v2-0-automate-performance-testing.html), [Blackfire](blackfire.io) allows the automation of performance tests.
 
-blackfire provides a [PHP SDK](https://blackfire.io/docs/reference-guide/php-sdk) that, among other things, allows to integrate performance tests inside PHPUnit : you can check that your code doesn't exhausts a memory limit, an execution time or a number of calls for a function/method.
+Blackfire provides a [PHP SDK](https://blackfire.io/docs/reference-guide/php-sdk) that, among other things, allows to integrate performance tests inside PHPUnit: You can check that your code doesn't exhaust a memory limit, an execution time or a number of calls for a function/method.
 
-How could we integrate those tests inside atoum in order to benefit from the greatness of atoum assertions ?
+How could we integrate those tests inside atoum in order to benefit from the greatness of atoum assertions?
 
 Installation
 ------------
 
 You need to have [blackfire](https://blackfire.io/docs/up-and-running/installation) and [atoum](http://docs.atoum.org/en/latest/getting_started.html#installation) installed.
 
-First, we need to install atoum's blackfire extension via composer.
+First, we need to install atoum's Blackfire extension via Composer.
 
 {% highlight bash %}
-composer require atoum/blackfire-extension
+$ composer require atoum/blackfire-extension
 {% endhighlight %}
 
-Then we need to configure the client id and token to access blackfire. We do that by adding a few lines in the `.atoum.php` file. For example here is how to do it when those variable are accessible as environnement variables: 
+Then we need to configure the client ID and token to access to Blackfire. We do that by adding a few lines in the `.atoum.php` file. For example here is how to do it when those variables are accessible as environnement variables: 
 
 {% highlight php %}
 <?php
@@ -41,15 +41,15 @@ $extension
 Usage
 -----
 
-The extension will provide a new asserter : `blackfire`.
+The extension provides a new asserter: `blackfire`.
 
 Those methods can be called from this new asserter: 
 
-* assert
-* defineMetric
-* profile
+* `assert`,
+* `defineMetric`,
+* `profile`.
 
-Let's take this test as an example:
+Let's consider the following test as an example:
 
 {% highlight php %}
 <?php
@@ -77,15 +77,15 @@ class Example extends atoum
 
 {% endhighlight %}
 
-This test will check that the code inside the anonymous function will not take more than 2 seconds to be executed.
+This test checks that the code inside the anonymous function will not take more than 2 seconds to be executed.
 
-Here we've added a `sleep(4)` to make the test fail, so an output like this will be displayed:
+Here we've added a `sleep(4)` to make the test fail, so the following output will be displayed:
 
 ![Output blackfire atoum](/images/posts/2016-02-08-blackfire-extension/screenshot.png)
 
-The callback has been called, instrumented by blackfire, sent to blackfire.io. blackfire.io has sent us the assertions results which have been integrated inside the unit tests results.
+The callback has been called, instrumented by Blackfire and sent to [blackfire.io](https://blackfire.io/). [blackfire.io](https://blackfire.io/) has sent us the assertion results which have been integrated inside the unit test results.
 
-This a an example based on the execution time. You can define more usefull assertions like this:
+This is an example based on the execution time. You can define more usefull assertions like this:
 
 {% highlight php %}
 <?php
@@ -124,9 +124,9 @@ class Example extends atoum
 Avoid running those tests
 -------------------------
 
-In order to only execute those tests, you can use the `extensions` tag ([read the documentation about it](http://docs.atoum.org/en/latest/written_help.html#php-extensions)) and atoum's `ruler-extension` that will allow you [to filter the tests that needs blackfire](https://github.com/atoum/ruler-extension#filter-on-the-test-required-extensions) (or filter the tests that does not need blackfire).
+In order to only execute those tests, you can use the `extensions` tag ([read the documentation about it](http://docs.atoum.org/en/latest/written_help.html#php-extensions)) and atoum's `ruler-extension` that allows you [to filter the tests that needs Blackfire](https://github.com/atoum/ruler-extension#filter-on-the-test-required-extensions) (or filter the tests that does not need Blackfire).
 
-For example, you can launch all the tests that do not need the blackfire php extension like this:
+For example, you can launch all the tests that do not need the Blackfire PHP extension like this:
 
 {% highlight bash %}
 ./vendor/bin/atoum -d tests --filter 'not(extensions contains "blackfire")'
@@ -136,7 +136,7 @@ For example, you can launch all the tests that do not need the blackfire php ext
 Last thoughts
 -------------
 
-This extension requires a least the version 2.5.0 of atoum : [read the 2.5.0 announcement](http://atoum.org/release/2016/01/08/release-2-5-0.html).
+This extension requires a least the version 2.5.0 of atoum: [read the 2.5.0 announcement](http://atoum.org/release/2016/01/08/release-2-5-0.html).
 
-A lot of [metric](https://blackfire.io/docs/reference-guide/metrics) and [variables](https://blackfire.io/docs/reference-guide/assertions) are available out of the box. As we saw previousely, you can define your own metric. So don't hesitate to add those assertions in your unit tests.
+A lot of [metrics](https://blackfire.io/docs/reference-guide/metrics) and [variables](https://blackfire.io/docs/reference-guide/assertions) are available out of the box. As we previously saw, you can define your own metric. So don't hesitate to add those assertions in your unit tests.
 
