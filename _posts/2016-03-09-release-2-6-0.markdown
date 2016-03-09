@@ -1,0 +1,30 @@
+---
+layout: post
+title: "Release 2.6.0"
+date: 2016-03-09 14:00:00
+author: "@atoum/RMs"
+categories: release
+---
+
+## Stats
+
+* 32 commits,
+* 28 files changed,
+* 6 contributors,
+* 2 new features,
+* 3 bug fixes.
+
+## What's new
+
+## Links
+
+* [Milestone][milestone],
+* [Release][release],
+* [Changelog][changelog],
+* [Commits][commits].
+
+[milestone]: https://github.com/atoum/atoum/issues?q=milestone%3A2.6.0
+[release]: https://github.com/atoum/atoum/releases/tag/2.6.0
+[changelog]: https://github.com/atoum/atoum/blob/master/CHANGELOG.md#260---2016-03-08
+[commits]: https://github.com/atoum/atoum/compare/2.5.2...2.6.0
+
