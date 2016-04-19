@@ -17,29 +17,29 @@ categories: release
 
 ## What's new
 
-Since the release 2.5.0 some change has been made. Here is some change highlights.
+Since the 2.5.0 release some changes have been. Here are some change highlights.
 
 ### Looper interface
 
-The loop system of atoum as been improved. The logic has been extracted and a looper interface has been created.
+The loop system of atoum has been improved. The logic has been extracted and a looper interface has been created.
 
-So it allows to create some extensions. And, this is what append [Adrien Gallou][@agallou] has created the new extension [autoloop-extension](https://github.com/atoum/autoloop-extension) that launch your test on file change!
+So it allows to create new extensions. And, this is what append: [Adrien Gallou][@agallou] has created the new [autoloop-extension](https://github.com/atoum/autoloop-extension) extension that launches your test on file change!
 
 
 ### In-memory cache for resolved asserters improvements
 
-[Julien Bianchi][@jubianchi] has done a great job on the cache resolver and has made *several* improvements. Check the [pull request](https://github.com/atoum/atoum/pull/569) to have more information about it.
+[Julien Bianchi][@jubianchi] has done a great job on the cache resolver and has made *many* improvements. Check the [pull request](https://github.com/atoum/atoum/pull/569) to have more information about it.
 
 
 ### Documentation
 
 We have made *some* change on the documentation... Now, it should be clearer and easier to use.
 
-* The design of the website has been adapted to the documentation
-* The structure is more logic
-* It's now English first instead of French first, so it's easier to translate
+* The design of the website has been adapted to the documentation,
+* The structure is easier to understand,
+* It's now English first instead of French first, so it's easier to translate.
 
-You should try it, go to the [documentation](http://docs.atoum.org).
+You should try it, go to the [documentation](http://docs.atoum.org)!
 
 
 ## Links
