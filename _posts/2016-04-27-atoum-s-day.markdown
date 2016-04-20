@@ -8,7 +8,7 @@ categories: event
 
 # atoum's day
 
-atoum existe depuis plusieurs année :  il est utilisé, il évolue, une communauté existe, ... mais il manque un petit quelque chose. Ce petit quelque chose, arrive enfin, en juin, plus exactement le 4 juin.
+atoum existe depuis plusieurs années :  il est utilisé, il évolue, une communauté existe, ... mais il manque un petit quelque chose. Ce petit quelque chose, arrive enfin, en juin, plus exactement le 4 juin.
 
 
 
@@ -37,7 +37,7 @@ Et nous finirons, en fonction du temps et des questions, par un moment de discut
 
 ## Comment s'inscrire
 
-Il vous suffit de vous inscrire sur evenbride pour y acceder, c'est simple et gratuit. En cas de désistement, n'oubliez pas de nous prévenir afin de laisser votre place aux autres ;).
+Il vous suffit de vous inscrire sur eventbrite pour y acceder, c'est simple et gratuit. En cas de désistement, n'oubliez pas de nous prévenir afin de laisser votre place aux autres ;).
 
 
 
@@ -51,7 +51,7 @@ métro, train, etc
 
 Bien entendu ce genre d’événement ne peux avoir lieu sans un peu d'aide, donc merci à nos sponsors du jour, à savoir :
 
-Norsys pour leur locaux
+Norsys pour leurs locaux
 
 [Logo de Norsys]
 
