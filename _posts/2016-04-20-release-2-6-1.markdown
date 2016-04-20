@@ -17,7 +17,7 @@ categories: release
 
 ## What's new
 
-Since the 2.5.0 release some changes have been. Here are some change highlights.
+Since the 2.5.0 release some changes have been made. Here are some change highlights.
 
 ### Looper interface
 
