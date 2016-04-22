@@ -44,14 +44,10 @@ You should try it, go to the [documentation](http://docs.atoum.org)!
 
 ## Links
 
-* [Milestone][milestone],
-* [Release][release],
-* [Changelog][changelog],
-* [Commits][commits].
+* [Milestone](https://github.com/atoum/atoum/issues?q=milestone%3A2.6.0+is%3Aclosed),
+* [Release](https://github.com/atoum/atoum/releases/tag/2.6.0),
+* [Changelog](https://github.com/atoum/atoum/blob/master/CHANGELOG.md#261---2016-04-08),
+* [Commits](https://github.com/atoum/atoum/compare/2.5.0...2.6.1).
 
-[milestone]: https://github.com/atoum/atoum/issues?q=milestone%3A2.6.0+is%3Aclosed
-[release]: https://github.com/atoum/atoum/releases/tag/2.6.0
-[changelog]: https://github.com/atoum/atoum/blob/master/CHANGELOG.md#261---2016-04-08
-[commits]: https://github.com/atoum/atoum/compare/2.5.0...2.6.1
 [@jubianchi]: https://github.com/jubianchi
 [@agallou]: https://github.com/agallou
