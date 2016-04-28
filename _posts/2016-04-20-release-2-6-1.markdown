@@ -1,0 +1,53 @@
+---
+layout: post
+title: "Release 2.6.1 and other change since 2.5.0"
+date: 2016-04-20 10:00:00
+author: "@Grummfy"
+categories: release
+---
+
+## Stats (2.5.0 - 2.6.1)
+
+* 59 commits,
+* 36 files changed,
+* 4 contributors,
+* 2 new features,
+* 1 improvement,
+* 3 bug fixes.
+
+## What's new
+
+Since the 2.5.0 release some changes have been made. Here are some change highlights.
+
+### Looper interface
+
+The loop system of atoum has been improved. The logic has been extracted and a looper interface has been created.
+
+So it allows to create new extensions. And, this is what append: [Adrien Gallou][@agallou] has created the new [autoloop-extension](https://github.com/atoum/autoloop-extension) extension that launches your test on file change!
+
+
+### In-memory cache for resolved asserters improvements
+
+[Julien Bianchi][@jubianchi] has done a great job on the cache resolver and has made *many* improvements. Check the [pull request](https://github.com/atoum/atoum/pull/569) to have more information about it.
+
+
+### Documentation
+
+We have made *some* change on the documentation... Now, it should be clearer and easier to use.
+
+* The design of the website has been adapted to the documentation,
+* The structure is easier to understand,
+* It's now English first instead of French first, so it's easier to translate.
+
+You should try it, go to the [documentation](http://docs.atoum.org)!
+
+
+## Links
+
+* [Milestone](https://github.com/atoum/atoum/issues?q=milestone%3A2.6.0+is%3Aclosed),
+* [Release](https://github.com/atoum/atoum/releases/tag/2.6.0),
+* [Changelog](https://github.com/atoum/atoum/blob/master/CHANGELOG.md#261---2016-04-08),
+* [Commits](https://github.com/atoum/atoum/compare/2.5.0...2.6.1).
+
+[@jubianchi]: https://github.com/jubianchi
+[@agallou]: https://github.com/agallou
