@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "atoum's day"
-date: 2016-04-27 10:00:00
+date: 2016-04-30 10:00:00
 author: "@Grummfy"
 categories: event
 ---
@@ -27,7 +27,7 @@ Nous commencerons par diverses présentations :
 * Comment je fais du Tdd avec atoum aujourd'hui - *Frédéric Hardy* (Créateur)
 * Documentation entre traduction, mise à jour et utilisation - *Jonathan Van Belle* (Doc)
 * Plongeons dans les entrailles d'atoum - *Julien Bianchi* (Core)
-* Créer un plug-in phpstorm - *Adrien Gallou* (Bundles)
+* Créer un plug-in phpstorm - *Adrien Gallou* (Plugin atoum pour PHPStorm)
 * Comment écrire une extension pour atoum - *Julien Bianchi* (Core)
 
 Nous aurons donc des présentations variées abordant différents sujets en relation avec le projet et atoum lui-même.
