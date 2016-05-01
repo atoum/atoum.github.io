@@ -325,7 +325,11 @@ You can also use atoum with your regular build tools and/or dependancy manager:
        <a href="http://www.phing.info/">Phing</a>
        <a href="http://docs.atoum.org/en/latest/cookbook.html#step-3-launching-tests-via-jenkins-or-hudson" class="integration__doc-link">(see how)</a>
     </li>
-
+    <li>
+       <img src="images/integrations_logos/robo.svg" />
+       <a href="http://robo.li/">Robo</a>
+       <a href="http://robo.li/tasks/Testing/#atoum" class="integration__doc-link">(see how)</a>
+    </li>
 </ul>
 
 </section>
