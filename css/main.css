@@ -203,7 +203,9 @@ header {
 }
 
 article {
-    padding-bottom: 4em;
+    background-color: rgba(255, 255, 255, 0.4);
+    color: #000;
+    padding: 25px 0 4em 0;
 }
 
 footer > p {
@@ -240,9 +242,11 @@ article > section > blockquote {
     padding-bottom: 1.5rem;
 }
 
-.visual-section:nth-child(odd) {
-    background: rgba(255, 255, 255, .05);
-}
+    .visual-section h2 {
+        margin: 0;
+        background: rgba(131, 93, 91, .2);
+        padding: 25px;
+    }
 
     .visual-section h2:not(:first-of-type),
     .visual-section h3 {
@@ -362,7 +366,7 @@ pre {
     line-height: 1.25em;
     padding: .5em 4rem;
     overflow-y: auto;
-    background: rgba(255, 255, 255, .7);
+    background: rgba(255, 255, 255, .4);
 }
     pre > code {
         color: inherit;
@@ -590,4 +594,8 @@ ul.integrations > li:before{
 
 blockquote cite::before {
     content: "— ";
+}
+
+.post-list {
+    padding:15px;
 }
