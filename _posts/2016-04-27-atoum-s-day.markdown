@@ -28,7 +28,7 @@ Nous commencerons par diverses présentations :
 * **Documentation entre traduction, mise à jour et utilisation** - *Jonathan Van Belle (co-respondable de la documentation)* : la maintenance d'une documentation est parfois difficile. Il faut gérer les mises à jour d'atoum, l'amélioration de la documentation. Le tout en gérant plusieurs langues. La documentation d'atoum a deux mainteneurs. Jonathan Van Belle, l'un d'eux, nous parlera de ces problématiques et comment elles sont abordées sur la documentation d'atoum.   
 * **Plongeons dans les entrailles d'atoum** - *Julien Bianchi (mainteneur d'atoum)* : atoum est extrement rapide à executer vos tests, et cela, tout en isolant ceux-ci et ayant une syntaxe très lisible. Vous vous êtes déjà demandé comment cela était possible ? Ce talk vous présentera le fonctionnement interne du moteur d'atoum.
 * **Créer un plug-in phpstorm** - *Adrien Gallou* (développeur du plugin atoum pour PHPStorm) : depuis peu, atoum bénéficie d'une intégration dans l'IDE PHPStorm, permetant, entre-autres, de lancer les tests depuis celui-ci. Nous verrons comment fonctionne ce plugin atoum pour PHPStorm.
-* **Comment écrire une extension pour atoum** - *Julien Bianchi (Mainteneur d'atoum)* : atoum, c'est une librairie standalone, mais aussi un écosystème d'extensions. Après avoir assisté à ce talk, vous saurez quels sont les points d'extensions exposés par atoum, et pourrez écrire vos propres extensions.
+* **Comment écrire une extension pour atoum** - *Julien Bianchi (mainteneur d'atoum)* : atoum, c'est une librairie standalone, mais aussi un écosystème d'extensions. Après avoir assisté à ce talk, vous saurez quels sont les points d'extensions exposés par atoum, et pourrez écrire vos propres extensions.
 
 </div>
 
@@ -80,7 +80,7 @@ ou
 Bien entendu ce genre d’événement ne peut avoir lieu sans un peu d'aide, donc merci à nos sponsors du jour, à savoir :
 
 
-<div class="columns" data-columns="3"><div class="text-center">
+<div class="columns" data-columns="2"><div class="text-center">
     
 [Norsys](http://www.norsys.fr/) pour leurs locaux
 
@@ -91,12 +91,6 @@ Bien entendu ce genre d’événement ne peut avoir lieu sans un peu d'aide, don
 [L'AFUP](http://lyon.afup.org) pour la co-organisation
 
 ![Logo AFUP Lyon](/images/posts/2016-05-03-atoum-day/afup_lyon.jpeg)
-
-</div><div class="text-center">
-
-autres ??? pour les boissons
-
-![Logo](/images/posts/2016-05-03-atoum-day)
 
 </div></div>
 
