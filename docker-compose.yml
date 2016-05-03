@@ -5,5 +5,5 @@ jekyll:
   ports:
     - 4000:4000
   environment:
-    VERBOSE: true
-    POLLING: true
+    VERBOSE: 'true'
+    POLLING: 'true'
