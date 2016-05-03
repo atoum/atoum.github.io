@@ -36,6 +36,11 @@ Nous finirons, en fonction du temps et des questions, par un moment de discussio
 
 Il vous suffit de vous inscrire sur [eventbrite](http://atoum-day.eventbrite.fr/) : c'est simple et gratuit. En cas de désistement, n'oubliez pas de nous prévenir afin de laisser votre place aux autres.
 
+<div style="max-width:750px;background-color:#fff;margin:auto">
+<iframe src="//eventbrite.fr/tickets-external?eid=24633173485&amp;ref=etckt" frameborder="0" height="250" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true" class="iframe-class"></iframe>
+</div>
+
+
 ## Quand aura t-il lieu ?
 
 Le 4 juin à partir de 14h00.
