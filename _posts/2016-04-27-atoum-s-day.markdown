@@ -97,7 +97,7 @@ Bien entendu ce genre d’événement ne peut avoir lieu sans un peu d'aide, don
 
 ## En résumé
 
-*Date* : 4 juin 2016 [Lien calendar quelconque, ical ou autre](https://fruux.com/calendars/public/a3298239895/0599f8a7-d3f3-49f3-be20-02bac999865f/)
+*Date* : [4 juin 2016](https://fruux.com/calendars/public/a3298239895/0599f8a7-d3f3-49f3-be20-02bac999865f/)
 
 *Lieu* : [59 Rue de l'Abondance, 69003 Lyon, France](https://goo.gl/maps/MS6ekYP8z2w)
 
