@@ -1,5 +1,5 @@
 name: Atoum's website
-highlighter: pygments
+highlighter: rouge
 timezone: Europe/Paris
 future: true
 exclude:
