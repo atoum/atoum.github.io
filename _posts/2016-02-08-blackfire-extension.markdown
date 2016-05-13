@@ -3,7 +3,7 @@ layout: post
 title: "Execute blackfire assertions inside atoum"
 date: 2016-02-08 09:00:00
 author: "@agallou"
-categories: description
+categories: news
 ---
 
 Intro

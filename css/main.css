@@ -593,6 +593,11 @@ ul.integrations > li:before{
                 color: #072066;
             }
 
+blockquote {
+    border-left: 4px solid #f5f2e7;
+    padding-left: 1rem;
+}
+
 blockquote cite::before {
     content: "— ";
 }
