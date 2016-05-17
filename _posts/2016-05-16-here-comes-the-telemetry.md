@@ -14,6 +14,10 @@ the telemetry platform!
 
 Here it is: [https://dashboard.telemetry.atoum.org](https://dashboard.telemetry.atoum.org).
 
+<p class="text-center">
+![Dashboard](/images/posts/2016-05-16-here-comes-the-telemetry/telemetry_envs.png)
+</p>
+
 ## Telemetry?
 
 Before getting into details, what is telemetry? Let's see what [Wikipedia](https://en.wikipedia.org) tells us:
