@@ -14,7 +14,7 @@ bundle install
 * Launch local server with generated website
 
 ```bash
-jekyll serve --watch
+bundle exec jekyll serve --watch
 ```
 
 * Access to [http://127.0.0.1:4000](http://127.0.0.1:4000) on your favorite browser.
