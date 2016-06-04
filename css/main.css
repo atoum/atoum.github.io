@@ -121,6 +121,10 @@ nav {
           background: rgba(111, 95, 93, .6);
       }
 
+      #nav-telemetry {
+          background: rgba(187, 73, 68, 0.6);
+      }
+
 #body { }
 
     @supports (pointer-events: none) {
