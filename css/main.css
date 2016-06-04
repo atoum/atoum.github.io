@@ -605,3 +605,7 @@ blockquote cite::before {
 .post-list {
     padding:15px;
 }
+
+#disqus_thread {
+    padding: 0 40px;
+}
