@@ -1,8 +1,22 @@
 ---
 layout: static
+comments: true
 ---
 
 <h1>{{ page.title }}</h1>
 <p class="header__paragraph">{{ page.author }} - {{ page.date | date_to_string }}</p>
 
 <section class="visual-section">{{ content }}</section>
+
+{% if page.comments %}
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+	(function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = '//atoum.disqus.com/embed.js';
+		s.setAttribute('data-timestamp', +new Date());
+		(d.head || d.body).appendChild(s);
+	})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+{% endif %}
