@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Back from atoum's day 2016"
-date: 2016-06-16 12:30:00
+date: 2016-06-17 12:30:00
 author: "@Grummfy"
 categories: event
 ---
@@ -18,27 +18,23 @@ But this event, was full of surprise and quite exciting! We are really happy to 
 
 We create this event also to speak between each contributors. This allow us to reach some points, and think to a new roadmap. We also check what we could do to improve atoum and his community. Some of the point will be detailled lower and some will be explain during the year. We would like to keep some new stuff under the hood, to allow you discovering it.
 
-One of the point we speak about was the [](phptour) of this year. During this event we got an area in the stand of Norsys. It help us to talk to people, make some demo, and give our first goodies to you, our community. And we enjoy it ;)
-
-TODO : put some pictures / tweet
-legend : our first goodies, some stickers
-
+One of the point we speak about was the [http://event.afup.org/php-tour-2016/](phptour) of this year. During this event we got an area in the stand of [http://www.norsys.fr/](Norsys). It help us to talk to people, make some demo, and give our first goodies (some stickers) to you, our community. And we enjoy it ;)
 
 ## Talks and user meeting
 
-We got four talks, instead of six due to time and strike. But it was very intresting talks and each of them were registred (badly, but we got it). You can discover it on youtube, if you understand french (or the google subtitle), in the ()[dedicated playlist].
+We got four talks, instead of six due to time and strike. But it was very intresting talks and each of them were registred (badly, but we got it). You can discover it on youtube, if you understand french (or the google subtitle), in the (https://www.youtube.com/playlist?list=PL_KNbXDBJ__SFuqpr-_g3elWJzctoLpwA)[dedicated playlist].
 
 
 ## Roadmap & next steps
 
-We try to think to what are missing now or what was blaoted in atoum and try to create the next steps. For the code, we still need to think about the points we identified, before spreading them. By the way, if you want to know more about it, just join us in our ()[chat room] and ask us.
+We try to think to what are missing now or what was blaoted in atoum and try to create the next steps. For the code, we still need to think about the points we identified, before spreading them. By the way, if you want to know more about it, just join us in our (https://webchat.freenode.net/?channels=##atoum)[chat room] and ask us.
 
 About the rest, we almost put in evidence that our main weakness is the communication. So we will try to spread more words about atoum on social media but also in other place like meetup or conferences.
 
 Some improvement that we see are sometimes just quick-win or nearly quick-win like
 
 * blog comments, that are now available
-* a "()[standard edition]" of atoum with some extension build-in.
+* a "standard edition" of atoum with some extension build-in. A preview is available (https://github.com/agallou/atoum-standard-edition)[there].
 
 
 Some other are more complicated, but can also have a a quick start :
