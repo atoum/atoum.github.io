@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Back from atoum's day 2016"
-date: 2016-06-17 12:30:00
+date: 2016-06-22 12:30:00
 author: "@Grummfy"
 categories: event
 ---
