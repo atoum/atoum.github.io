@@ -34,7 +34,7 @@ Regarding the rest, we almost put in evidence that our main weakness is the comm
 Some improvement that we see are sometimes just quick-win or nearly quick-win like
 
 * blog comments that are now available, just below ;)
-* A "standard edition" of atoum with some extension build-in. A preview is available (https://github.com/agallou/atoum-standard-edition)[there], even if it is still a POC.
+* A "standard edition" of atoum with some extension build-in. We will get back with it soon.
 
 
 Some others are more complicated, but can also have a quick start :
