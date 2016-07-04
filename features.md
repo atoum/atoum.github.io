@@ -272,7 +272,7 @@ atoum integrates well with those CI tools:
     <li>
        <img src="images/integrations_logos/gitlab.svg" />
        <a href="https://about.gitlab.com/gitlab-ci/">GitLab CI</a>
-       <a href="http://doc.gitlab.com/ce/ci/languages/php.html#using-atoum" class="integration__doc-link">(see how)</a>
+       <a href="http://docs.gitlab.com/ce/ci/examples/php.html#using-atoum" class="integration__doc-link">(see how)</a>
     </li>
     <li>
        <img src="images/integrations_logos/circleci.svg" />
