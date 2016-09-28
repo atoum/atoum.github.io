@@ -354,28 +354,28 @@ suite, which are known to be important and intensive, both in terms of computati
     <tbody>
     <tr>
         <td>Test suites</td>
-        <td>224</td>
-        <td>81</td>
+        <td>235</td>
+        <td>139</td>
     </tr>
     <tr>
         <td>Test cases</td>
-        <td>1816</td>
-        <td>611</td>
+        <td>1888</td>
+        <td>1304</td>
     </tr>
     <tr>
         <td>Assertions</td>
-        <td>26,774</td>
-        <td>177,976</td>
+        <td>27,540</td>
+        <td>411,516</td>
     </tr>
     <tr class="table--double-separator">
         <td>Time</td>
-        <td>25s</td>
-        <td>93s</td>
+        <td>61s</td>
+        <td>172s</td>
     </tr>
     <tr>
         <td>Memory</td>
-        <td>58Mb</td>
-        <td>50Mb</td>
+        <td>464Mb</td>
+        <td>1328Mb</td>
     </tr>
     </tbody>
 </table>
