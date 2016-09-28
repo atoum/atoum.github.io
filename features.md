@@ -314,7 +314,7 @@ but atoum also plays well with:
 
 You can also use atoum with your regular build tools and/or dependancy manager:
 
-<ul class="columns integrations" data-columns="3">
+<ul class="columns integrations" data-columns="4">
     <li>
        <img src="images/integrations_logos/composer.svg" />
        <a href="https://getcomposer.org/">Composer</a>
@@ -329,6 +329,11 @@ You can also use atoum with your regular build tools and/or dependancy manager:
        <img src="images/integrations_logos/robo.svg" />
        <a href="http://robo.li/">Robo</a>
        <a href="http://robo.li/tasks/Testing/#atoum" class="integration__doc-link">(see how)</a>
+    </li>
+    <li>
+       <img src="images/integrations_logos/grumphp.svg" />
+       <a href="https://github.com/phpro/grumphp">GrumPHP</a>
+       <a href="https://github.com/phpro/grumphp/blob/master/doc/tasks/atoum.md" class="integration__doc-link">(see how)</a>
     </li>
 </ul>
 
