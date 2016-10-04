@@ -258,7 +258,7 @@ Note the global `$script` and `$runner` variables: reach any part of atoum to fi
 ## Third-party integration
 
 atoum integrates well with those CI tools:
-<ul class="columns integrations" data-columns="4">
+<ul class="columns integrations" data-columns="5">
     <li>
        <img src="images/integrations_logos/travis-ci.svg" />
        <a href="https://travis-ci.org/">Travis CI</a>
@@ -277,6 +277,11 @@ atoum integrates well with those CI tools:
     <li>
        <img src="images/integrations_logos/circleci.svg" />
        <a href="https://circleci.com/">Circle CI</a>
+    </li>
+    <li>
+       <img src="images/integrations_logos/phpci.svg" />
+       <a href="https://www.phptesting.org/">PHPCI</a>
+       <a href="https://www.phptesting.org/wiki/Atoum-Plugin" class="integration__doc-link">(see how)</a>
     </li>
 </ul>
 
