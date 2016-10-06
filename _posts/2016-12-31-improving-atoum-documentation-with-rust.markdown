@@ -102,7 +102,7 @@ As a first step in improving atoum's documentation, Rusty helped us detect and f
 
 Fixing mistakes is good. Avoiding them reappearing is even better.
 
-For that we've added a travis configuration to our documentation repository in order to alert (via the [pull request status](https://github.com/blog/1935-see-results-from-all-pull-request-status-checks)) the documentation writers when such a mistake occurs.
+To prevent such errors we've added a travis configuration to our documentation repository in order to alert (via the [pull request status](https://github.com/blog/1935-see-results-from-all-pull-request-status-checks)) the documentation writers when such a mistake occurs.
 
 You can see an example of an implementation of Rusty on travis in this [pull Request](https://github.com/atoum/atoum-documentation/pull/210).
 
