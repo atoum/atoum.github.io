@@ -1,8 +1,8 @@
-# Atoum's website source code
+# atoum's website source code
 
 This repo contains the source code for atoum website, [atoum.org](http://atoum.org).
 
-# Install
+## Install
 
 * Clone repository
 * Install dependencies (assuming you have a working [bundler](http://bundler.io/) installation).
