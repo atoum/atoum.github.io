@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Improving atoum's documentation using Rusty"
-date: 2016-12-31 09:00:00
+date: 2016-11-21 09:00:00
 author: "@agallou"
 categories: news
 ---
