@@ -6,7 +6,6 @@ cache: bundler
 
 script:
   - bundle exec jekyll build
-  - bundle exec jekyll algolia push
 
 rvm:
  - 2.2
