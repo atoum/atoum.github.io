@@ -546,56 +546,43 @@ ul.integrations > li:before{
   font-size: 80%;
 }
 
+
+#algolia-search {
+    font: 1.2em/1.5em Text;
+    width: 100%;
+    padding: .1em .5em;
+    outline: none !important;
+    box-shadow: none !important;
+    border: 1px solid rgba(111, 95, 93, .6);
+    vertical-align: middle!important;
+    color: rgb(157, 92, 87);
+    border-radius: .5em;
+    text-align: center;
+}
+
 .algolia-autocomplete {
     width: 30rem;
-    margin: 0 auto;
-    display: block!important;
+    display: block !important;
+    margin: auto;
+    padding: 15px;
+    transition: width .2s ease;
 }
-    .algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
-        font: 1.2em/1.5em Text;
-        width: 100%;
-        padding: .1em .5em;
-        outline: none !important;
-        box-shadow: none !important;
-        border: 1px solid rgba(111, 95, 93, .6);
-        vertical-align: middle!important;
-        color: rgb(157, 92, 87);
-        border-radius: .5em;
-    }
 
-    .algolia-autocomplete .aa-dropdown-menu {
-        width: 30rem;
-        text-align: left;
-        background-color: #fff;
-        border: 1px solid rgba(111, 95, 93, .6);
-        border-top: none;
-        margin-top: -.4em;
-        border-radius: 0 0 .5em .5em;
-    }
+.search-focused .algolia-autocomplete {
+    width: 100%;
+}
 
-        .algolia-autocomplete .aa-dropdown-menu .branding {
-            text-align: right;
-            line-height: 20px;
-            padding: .5em .5em 0 0;
-        }
-            .algolia-autocomplete .aa-dropdown-menu .branding img {
-                height: 20px;
-            }
+.ds-dropdown-menu {
+    width: 100%;
+    max-width: none !important;
+    padding: 0 30px !important;
+}
 
-        .algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
-            cursor: pointer;
-            padding: 5px 4px;
-            color: rgb(157, 92, 87);
-        }
-            .algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
-                background-color: #f5f2e7;
-            }
+.algolia-autocomplete .algolia-docsearch-suggestion--category-header {
+    background-color: rgba(131, 93, 91, .2);
+    padding: 0 5px;
+}
 
-            .algolia-autocomplete .aa-dropdown-menu .aa-suggestion .algolia__result-highlight {
-                font-weight: bold;
-                font-style: normal;
-                color: #072066;
-            }
 
 blockquote {
     border-left: 4px solid #f5f2e7;

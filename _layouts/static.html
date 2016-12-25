@@ -16,6 +16,7 @@
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
   </head>
 
   <body>
@@ -32,38 +33,20 @@
       {% include footer.html %}
     </div>
 
-    <script src="//cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
-    <script src="//cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
-    <script>
-      var client = algoliasearch("{{ site.algolia.application_id }}", "{{ site.algolia.api_key }}");
-      var index = client.initIndex("{{ site.algolia.index_name }}");
-      autocomplete(
-        "#search-input",
-        {
-          hint: false,
-          autoselect: true,
-          templates: {
-            footer: "<div class=\"branding\"><a href=\"https://www.algolia.com/\"><img src=\"/images/Algolia_logo_bg-white.svg\" /></a></div>"
-          }
-        },
-        [
-          {
-            source: autocomplete.sources.hits(index, { hitsPerPage: 5 }),
-            displayKey: "title",
-            templates: {
-              suggestion: function(suggestion) {
-                return "<h3>" + suggestion._highlightResult.title.value + "</h3><small>" + suggestion._highlightResult.text.value + "</small>";
-              }
-            }
-          }
-        ]).on("autocomplete:selected", function(event, suggestion, dataset) {
-        document.location = suggestion.url
-      });
-    </script>
-
     <script src="/js/es6-promise.js"></script>
     <script src="/js/fetch.js"></script>
     <script src="/js/menu.js"></script>
+    <script src="/js/search.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+    <script type="text/javascript"> docsearch({
+        apiKey: '0f252c26c36d6ef21fb74be147e94b14',
+        indexName: 'atoum',
+        inputSelector: '#algolia-search',
+        algoliaOptions: { 'facetFilters': [["language:en", 'tags:extensions']] },
+        debug: false
+    });
+    </script>
 
     <script>
       (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
