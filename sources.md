@@ -19,9 +19,6 @@ Consequently, assuming Composer is already installed, we need to run the followi
 composer require --dev 'atoum/atoum'
 {% endhighlight %}
 
-This notation means: All versions greater than `2.0` and lower than `3.0`, i.e. the latest safe major version until the
-next incompatible change in the API.
-
 One might notice that `atoum/atoum` has been declared as a `require-dev`, saying a development requirement. In fact,
 we are more likely to use atoum as a development tool rather than a production tool. Running tests in production does
 not sound a good idea. This may be done before releasing a software.
