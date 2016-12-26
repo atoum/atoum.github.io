@@ -110,6 +110,18 @@ atoum is using [Git][git]. [Repositories are hosted on Github][atoum-repo-gh] un
 Github is used to manage and track bugs, issues, roadmap etc. If you would like to report a bug, this will happen there.
 </section>
 
+<script src="/js/release.js"></script>
+<script>
+var release = new Release();
+release.getPharUrl().then(function(url) {
+    document.body.innerHTML = document.body.innerHTML.split("https://github.com/atoum/atoum/releases/download/2.5.0/atoum.phar").join(url);
+});
+
+release.getPharShortUrl().then(function(url) {
+    document.body.innerHTML = document.body.innerHTML.split("/atoum/atoum/#/releases/download/2.5.0/atoum.phar").join(url);
+});
+</script>
+
 [release]: /atoum/atoum/#/releases/latest
 [changelog]: /atoum/atoum/#/blob/master/CHANGELOG.md
 [@Hywan]: https://github.com/Hywan
