@@ -43,15 +43,11 @@ title: atoum
   <p>Installing atoum in your project is as simple as that:</p>
 
 {% highlight sh %}
-composer require --dev 'atoum/atoum:*'
+composer require --dev 'atoum/atoum'
 
 vendor/bin/atoum -d tests/units
 {% endhighlight %}
 </section>
 
 <script>
-var release = new Release();
-release.getVersion().then(function(version) {
-  document.body.innerHTML = document.body.innerHTML.split("atoum/atoum:*").join("atoum/atoum:" + version);
-});
 </script>

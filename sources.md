@@ -16,11 +16,8 @@ repository under the names <code>atoum/<em>project</em></code>. Thus, the test f
 Consequently, assuming Composer is already installed, we need to run the following ccommand to add atoum to your project:
 
 {% highlight sh %}
-composer require --dev 'atoum/atoum:*'
+composer require --dev 'atoum/atoum'
 {% endhighlight %}
-
-This notation means: All versions greater than `2.0` and lower than `3.0`, i.e. the latest safe major version until the
-next incompatible change in the API.
 
 One might notice that `atoum/atoum` has been declared as a `require-dev`, saying a development requirement. In fact,
 we are more likely to use atoum as a development tool rather than a production tool. Running tests in production does
@@ -110,6 +107,7 @@ atoum is using [Git][git]. [Repositories are hosted on Github][atoum-repo-gh] un
 Github is used to manage and track bugs, issues, roadmap etc. If you would like to report a bug, this will happen there.
 </section>
 
+<script src="/js/release.js"></script>
 <script>
 var release = new Release();
 release.getPharUrl().then(function(url) {
@@ -118,10 +116,6 @@ release.getPharUrl().then(function(url) {
 
 release.getPharShortUrl().then(function(url) {
     document.body.innerHTML = document.body.innerHTML.split("/atoum/atoum/#/releases/download/2.5.0/atoum.phar").join(url);
-});
-
-release.getVersion().then(function(version) {
-  document.body.innerHTML = document.body.innerHTML.split("atoum/atoum:*").join("atoum/atoum:" + version);
 });
 </script>
 

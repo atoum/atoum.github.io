@@ -16,23 +16,12 @@ gems:
   - jemoji
   - jekyll-sitemap
   - jekyll-feed
-  - algoliasearch-jekyll
 
 feed:
   path: atom.xml
 
 jekyll-mentions:
   base_url: https://github.com
-
-algolia:
-  application_id: UNWNRBCSW9
-  index_name: atoum.github.io
-  api_key: 339e9268c176dfc515c2a1d303aefff2
-  record_css_selector: 'p,ul'
-  excluded_files:
-    - 404.md
-    - atoum_org.md
-    - atoum_repo.md
 
 ga:
   tracking: UA-72192129-1
