@@ -1,0 +1,180 @@
+---
+layout: post
+title: "Release 3.0.0"
+date: 2017-02-22 14:10:00
+author: "@jubianchi"
+categories: release
+---
+
+We are proud to announce the availability of atoum [3.0.0][milestone]!
+
+## Stats
+
+* 55 [commits][commits],
+* 580 files changed,
+* 8 contributors,
+* 5 [new features][changelog],
+* 1 [bug fix][changelog].
+
+## What's new
+
+**Everything we will talk about here is also available in the [changelog][changelog] and in the [upgrade guide][upgrade].**
+**It's the first release to be fully compatible with all latest PHP versions (`7.x`).**
+
+### Deprecations and breaking changes
+
+As you may know atoum is released under the [semver][semver] convention. **The 3.0.0 release comes with its breaking 
+changes**. Most of them are minor and you might not notice them but it's worth giving you some details.
+
+#### Runtime
+
+We have **dropped support for some PHP and xDebug versions**. atoum now supports PHP `>= 5.6.0` and xDebug `>= 2.3.0`.
+
+Take care of the xDebug version you use: atoum might work with a version lower than `2.3.0` but you might encounter 
+segfaults on latest PHP versions. **To avoid any problem it is recommended to use the latest stable version: `2.5.0`.**
+
+#### Reports
+
+atoum used to provide some fancy reports. You probably known them: the Nyancat and Santa reports. As these reports are 
+not really usefull **they have been moved to the [`reports-extension`][reports-extension]**. If you
+were using them, install the extension and they should work without requiring you to change anything to your 
+configuration file.
+
+Another thing about reports: atoum provides an advanced API to design your own reports. Reports in atoum use something 
+we call "fields" to display information. One of those field had its class named `void`. In latest PHP versions, `void` 
+is a reserved keyword thus we can't use it anymore in class names.
+
+**The `void` class has been renamed to `blank`**. If you wrote custom reports using this field, you will have to use 
+the new class name.
+
+#### Assertions
+
+We changed some assertions and helpers: `exception` and `when`.
+
+atoum `2.x` supported PHP `>= 5.3.3`. Because on lower version `$this` in closures was not bound to the current object 
+context, some assertions provided the test as an argument to closures.
+
+**This is not the case anymore: you will have to change your tests** if you used this feature.
+
+```php
+// atoum 2.x
+
+$this
+    ->when(function(atoum\test $test) { 
+        $test->testedInstance->doSomething();
+    })
+;
+
+$this
+    ->exception(function(atoum\test $test) { 
+        $test->testedInstance->doSomethingAndThrow();
+    })
+;
+
+// atoum 3.x
+
+$this
+    ->when(function() { 
+        $this->testedInstance->doSomething();
+    })
+; 
+
+$this
+    ->exception(function() { 
+        $this->testedInstance->doSomethingAndThrow();
+    })
+;
+```
+
+### New features and bug fixes
+
+#### Asserting on generators
+
+Because generators are awesome, you should be able to use them and test them correctly. [Adrien Gallou][@agallou] did a 
+great job on writing this new asserter. It will allow you to walk through any generator and assert on the yielded 
+values. Here is an example:
+
+```php
+$this
+    ->generator($generator())
+        ->yields->array
+              ->isEqualTo(["1", "2", "3"])
+              ->contains("1")
+              ->string[0]->isEqualTo(1)
+        ->yields->integer
+              ->isZero
+        ->yields->variable->isNull
+        ->returns->variable->isEqualTo(42)
+        //...
+;
+```
+
+#### Coding style
+
+Let's talk about the numbers. Especially one of them: you might have noticed the 580 files changed. This is a lot! 
+atoum has a total of 557 files (source files and test files) so 580 is really a lot of change but this is for some good 
+reasons. Guess what: **atoum finally adopted a common coding-style, [PSR-2][PSR-2]**.
+
+We hope this will be a good move for two main reasons: lower the friction for new contributors and ease our work when 
+reviewing PRs: We hooked up [StyleCI][StyleCI] and [PHP CS Fixer][PHP CS Fixer].
+
+#### More
+
+You might also check the changelog for the previous release [`2.9.0`][changelog_290] as it also introduced new features 
+around the mock engine, array assertions and extensions.
+
+### Asides
+
+We released the VIM plugin as a standalone component: it now has its [own repository][vim-plugin].
+
+We also released a Hombrew Tap with some formulae: [homebrew-atoum][homebrew-atoum].
+
+A new website is available: [http://extensions.atoum.org/](http://extensions.atoum.org/) where you will be able to 
+browse the list of extensions. We also added [topics][topics] (tags) on the repositories so you can find them on Github.
+
+### Extensions
+
+Some extensions have been updated:
+
+* The [config-extension][config-extension] has been released,
+* The [autoloop-extension][autoloop-extension] has been updated,
+* The [visibility-extension][visibility-extension] has been updated,
+* The [reports-extension][reports-extension] has been updated,
+* The [json-schema-extension][json-schema-extension] has been updated.
+
+We still need to update some extensions but the most used ones should already be OK.
+
+### Documentation
+
+We also updated missing parts of the documentation. Again, [our contributors][contributors] and our 
+[doc master][@doc] did an amazing job! We will keep working on this part to improve it.
+
+## Links
+
+* [Milestone][milestone],
+* [Release][release],
+* [Changelog][changelog],
+* [Commits][commits].
+
+[milestone]: https://github.com/atoum/atoum/issues?q=milestone%3A3.0.0+is%3Aclosed
+[release]: https://github.com/atoum/atoum/releases/tag/3.0.0
+[changelog]: https://github.com/atoum/atoum/blob/master/CHANGELOG.md#300---2017-02-22
+[changelog_290]: https://github.com/atoum/atoum/blob/master/CHANGELOG.md#290---2017-02-11
+[upgrade]: https://github.com/atoum/atoum/blob/master/UPGRADE.md
+[commits]: https://github.com/atoum/atoum/compare/2.9.0...3.0.0
+[contributors]: https://github.com/orgs/atoum/teams/contributors
+[@agallou]: https://github.com/agallou
+[@mageekguy]: https://github.com/mageekguy
+[@doc]: https://github.com/orgs/atoum/teams/docs
+[reports-extension]: https://github.com/atoum/reports-extension
+[semver]: http://semver.org
+[StyleCI]: https://styleci.io/
+[PSR-2]: http://www.php-fig.org/psr/psr-2/
+[PHP CS Fixer]: http://cs.sensiolabs.org/
+[vim-plugin]: https://github.com/atoum/vim-plugin
+[homebrew-atoum]: https://github.com/atoum/homebrew-atoum
+[autoloop-extension]: https://github.com/atoum/autoloop-extension
+[visibility-extension]: https://github.com/atoum/visibility-extension
+[config-extension]: https://github.com/atoum/config-extension
+[json-schema-extension]: https://github.com/atoum/json-schema-extension
+[topics]: https://github.com/search?utf8=%E2%9C%93&q=topic%3Aatoum-extension&type=Repositories&ref=searchresults
