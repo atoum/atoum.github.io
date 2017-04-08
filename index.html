@@ -5,6 +5,30 @@ title: atoum
 
 <h1>atoum</h1>
 
+<style>
+  .about-features-container {
+    margin: 15px 0;
+  }
+
+  .about-features-container:after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+
+  .about-features-block {
+    width: 50%;
+    display: inline-block;
+    float: left;
+    padding: 15px 35px;
+  }
+
+  article .whats-next a {
+    padding: 20px;
+    font-size: 1.52em;
+  }
+</style>
+
 <p style="text-align: center">
   <iframe src="https://ghbtns.com/github-btn.html?user=atoum&repo=atoum&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
   <iframe src="https://ghbtns.com/github-btn.html?user=atoum&repo=atoum&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>
@@ -13,41 +37,110 @@ title: atoum
   atoum is a <strong>simple</strong>, <strong>modern</strong> and
   <strong>intuitive</strong> unit testing framework for PHP! It is completly
   <strong>standalone</strong>, everything is available and <strong>works out
-  of the box</strong>:
+  of the box</strong>.
 </p>
 
 <section class="visual-section">
-  <ul>
-    <li data-item="★">
-      <strong>Tests isolation</strong> and <strong>parallelization</strong> to
-      get better performances and avoid side-effects on tests,
-    </li>
-    <li data-item="★">
-      <strong>Full-featured mock engine</strong>,
-    </li>
-    <li data-item="★">
-      <strong>Adapters</strong> to fake PHP functions,
-    </li>
-    <li data-item="★">
-      <strong>Virtual streams</strong> to mock filesystem,
-    </li>
-    <li data-item="★">
-      And many more!
-    </li>
-  </ul>
+  <h2>Leverage the power of asserters</h2>
+  <div class="about-features-container">
+    <div class="about-features-block">
+      <p>
+        The asserters will make you tests <strong>easy to read</strong> and simplify your test. Also, more things will be tested with less code because asserter will also test things like types.
+      </p>
+    </div>
+    <div class="about-features-block">
+{% highlight php %}
+<?php
+$this
+  ->string("hello world")
+      ->endWith("world")
+      ->hasLength(11)
+  ->array([1, 2, 3])
+      ->hasSize(3)
+;
+{% endhighlight %}
+    </div>
+  </div>
 </section>
 
 <section class="visual-section">
-  <h2>Use it</h2>
-
-  <p>Installing atoum in your project is as simple as that:</p>
-
-{% highlight sh %}
-composer require --dev 'atoum/atoum'
-
-vendor/bin/atoum -d tests/units
-{% endhighlight %}
+  <h2>A fast engine you can count on</h2>
+  <div class="about-features-container">
+    <div class="about-features-block">
+      <img src="/images/icon/concurrent.svg" style="width: 100px; height: 100px; display: block; margin: 1rem auto"/>
+    </div>
+    <div class="about-features-block">
+      <strong>Tests isolation</strong> and <strong>parallelization</strong> to
+      get better performances and avoid side-effects on tests.
+      Unit tests needs to be fast.
+    </div>
+  </div>
 </section>
 
-<script>
-</script>
+<section class="visual-section">
+  <h2>Create mocks without headache </h2>
+  <div class="about-features-container">
+    <div class="about-features-block">
+      Easy to use, and with a lot of features, atoum mocks will make you not hesitate to write mocks, so your tests will be <strong>more decoupled and easier to maintain</strong>.
+    </div>
+    <div class="about-features-block">
+{% highlight php %}
+<?php
+$mockDbClient = new \mock\Database\Client();
+
+// Redefine the method connect
+// it will always return true
+$this->calling($mockDbClient)->connect = true;
+
+// Redefine the method select
+// it will execute the given anonymous function
+$this->calling($mockDbClient)->select = function() {
+  return array();
+};
+{% endhighlight %}
+    </div>
+  </div>
+</section>
+
+<section class="visual-section">
+  <h2>Integrated with all the PHP ecosystem</h2>
+  <div class="about-features-container">
+    <div class="about-features-block" style="text-align: center">
+      <img src="/images/third_party_list.png"  style="max-width: 50%" />
+    </div>
+    <div class="about-features-block">
+      From your prefered IDE to the lastest SAAS tool, you can found an integration with atoum.
+    </div>
+  </div>
+</section>
+
+<section class="visual-section">
+  <h2>A lot a additionnal features via extentions</h2>
+  <div class="about-features-container">
+    <div class="about-features-block">
+      Test JSON or XML, use a BDD-like syntax, and so much more. atoum has a vas ecosystem of extensions to extend the already rich functionnalities of this test framework. <a href="http://extensions.atoum.org">View all extensions</a>
+    </div>
+    <div class="about-features-block">
+      <img src="/images/icon/puzzle.svg" style="width: 100px; height: 100px; display: block; margin: 1rem auto"/>
+    </div>
+  </div>
+</section>
+
+
+<section class="visual-section">
+  <h2>What's next ?</h2>
+
+  <p>atoum has many more features, here are the next steps to try it or read more about them:</p>
+
+  <div class="about-features-container whats-next">
+    <div class="about-features-block" style="width: 33%;text-align:center">
+      <a href="/sources.html">Download It</a>
+    </div>
+    <div class="about-features-block" style="width: 33%;text-align:center">
+      <a href="/features.html">View more features</a>
+    </div>
+    <div class="about-features-block" style="width: 33%;text-align:center">
+      <a href="http://docs.atoum.org">Read the documentation</a>
+    </div>
+  </div>
+</section>
