@@ -5,6 +5,7 @@ future: true
 exclude:
   - docker-compose.yml
   - vendor
+  - scripts
 
 markdown: kramdown
 kramdown:
