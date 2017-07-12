@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Release 3.1.0"
-date: 2017-07-19 10:00:00
+date: 2017-07-18 10:00:00
 author: "@Grummfy"
 categories: release
 ---
@@ -18,49 +18,27 @@ We are proud to announce the availability of atoum [3.1.0][milestone]!
 
 ## What's new
 
------ release message to help redact this -----
-* [#726](https://github.com/atoum/atoum/pull/726) Remove an autoloader cache warning (@hywan)
-* [#719](https://github.com/atoum/atoum/pull/719) Add nullable type support in the mock engine (@grummfy)
-* [#723](https://github.com/atoum/atoum/pull/724) `object` is a reserved keyword as of PHP 7.2 (@trasher)
-* [#713](https://github.com/atoum/atoum/pull/713) Results are folded on Travis CI (@jubianchi)
-* [#709](https://github.com/atoum/atoum/pull/709) Exception asserter now has `isInstanceOf` without parenthesis (@guiled)
-* [#705](https://github.com/atoum/atoum/pull/705) Stream asserter now has `isRead` and `isWritten` assertion (without brackets) (@guiled)
-* [#701](https://github.com/atoum/atoum/pull/701) Mock generator supports `strict_types` (@jubianchi)
+Several new feature and a bug fix came with this release.
 
-## Bugfix
+Thing related to PHP version 7.1 & 7.2 to let atoum be ready for the next version of PHP:
+* The mock generator can now manage nullable type and handle the void type
+* The mock generator support strict types
+* The object asserter has been renamed phpObject to avoid issue related to reserved words in PHP 7.2 
 
-* [#701](https://github.com/atoum/atoum/pull/701) Mock generator correctly handles `void` return type (@jubianchi)
------ release message to help redact this -----
+### Assertions & asserters
 
-TODO : INTRODUCTION
+#### Exception
+Now the asserter on exception has an `isInstanceOf` that can be used assertions without brackets.
 
-### Deprecations and breaking changes
-
-TODO
-
-#### Runtime
-
-TODO
-
-#### Reports
-
-TODO
-
-#### Assertions
-
-TODO
-
-### New features and bug fixes
-
-TODO
-
-### Extensions
-
-TODO
+#### Stream
+Now the asserter on stream has a `isRead` and `isWritten`  that can be used assertions without brackets.
 
 ### Documentation
 
-TODO
+Since the last revision, a lot of improvements on mock usage have been made. Several asserter and assertion 
+have been added like for the resources, stream, generator or the constant.
+
+You can see more on the [Change list][documentation].
 
 ## Links
 
@@ -69,4 +47,9 @@ TODO
 * [Changelog][changelog],
 * [Commits][commits].
 
-[milestone]: https://github.com/atoum/atoum/issues?q=milestone%3A3.1.0+is%3Aclosed[release]: https://github.com/atoum/atoum/releases/tag/3.1.0[changelog]: https://github.com/atoum/atoum/blob/master/CHANGELOG.md#310---2017-07-11[commits]: https://github.com/atoum/atoum/compare/3.0.0...3.1.0[contributors]: https://github.com/orgs/atoum/teams/contributors
+[milestone]: https://github.com/atoum/atoum/issues?q=milestone%3A3.1.0+is%3Aclosed
+[release]: https://github.com/atoum/atoum/releases/tag/3.1.0
+[changelog]: https://github.com/atoum/atoum/blob/master/CHANGELOG.md#310---2017-07-11
+[commits]: https://github.com/atoum/atoum/compare/3.0.0...3.1.0
+[contributors]: https://github.com/orgs/atoum/teams/contributors
+[documentation]: https://github.com/atoum/atoum-documentation/compare/9ce2aa4...master
