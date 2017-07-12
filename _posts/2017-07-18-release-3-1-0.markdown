@@ -1,0 +1,72 @@
+---
+layout: post
+title: "Release 3.1.0"
+date: 2017-07-19 10:00:00
+author: "@Grummfy"
+categories: release
+---
+
+We are proud to announce the availability of atoum [3.1.0][milestone]!
+
+## Stats
+
+* 33 [commits][commits],
+* 277 files changed,
+* 7 contributors,
+* 7 [new features][changelog],
+* 1 [bug fix][changelog].
+
+## What's new
+
+----- release message to help redact this -----
+* [#726](https://github.com/atoum/atoum/pull/726) Remove an autoloader cache warning (@hywan)
+* [#719](https://github.com/atoum/atoum/pull/719) Add nullable type support in the mock engine (@grummfy)
+* [#723](https://github.com/atoum/atoum/pull/724) `object` is a reserved keyword as of PHP 7.2 (@trasher)
+* [#713](https://github.com/atoum/atoum/pull/713) Results are folded on Travis CI (@jubianchi)
+* [#709](https://github.com/atoum/atoum/pull/709) Exception asserter now has `isInstanceOf` without parenthesis (@guiled)
+* [#705](https://github.com/atoum/atoum/pull/705) Stream asserter now has `isRead` and `isWritten` assertion (without brackets) (@guiled)
+* [#701](https://github.com/atoum/atoum/pull/701) Mock generator supports `strict_types` (@jubianchi)
+
+## Bugfix
+
+* [#701](https://github.com/atoum/atoum/pull/701) Mock generator correctly handles `void` return type (@jubianchi)
+----- release message to help redact this -----
+
+TODO : INTRODUCTION
+
+### Deprecations and breaking changes
+
+TODO
+
+#### Runtime
+
+TODO
+
+#### Reports
+
+TODO
+
+#### Assertions
+
+TODO
+
+### New features and bug fixes
+
+TODO
+
+### Extensions
+
+TODO
+
+### Documentation
+
+TODO
+
+## Links
+
+* [Milestone][milestone],
+* [Release][release],
+* [Changelog][changelog],
+* [Commits][commits].
+
+[milestone]: https://github.com/atoum/atoum/issues?q=milestone%3A3.1.0+is%3Aclosed[release]: https://github.com/atoum/atoum/releases/tag/3.1.0[changelog]: https://github.com/atoum/atoum/blob/master/CHANGELOG.md#310---2017-07-11[commits]: https://github.com/atoum/atoum/compare/3.0.0...3.1.0[contributors]: https://github.com/orgs/atoum/teams/contributors
