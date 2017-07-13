@@ -20,10 +20,11 @@ We are proud to announce the availability of atoum [3.1.0][milestone]!
 
 Several new feature and a bug fix came with this release.
 
-Thing related to PHP version 7.1 & 7.2 to let atoum be ready for the next version of PHP:
+Things related to PHP next version 7.1 & 7.2 to let atoum be ready for the next version of PHP:
 * The mock generator can now manage nullable type and handle the void type
 * The mock generator support strict types
-* The object asserter has been renamed phpObject to avoid issue related to reserved words in PHP 7.2 
+* The object asserter has been renamed to phpObject to avoid issue related to reserved words in PHP 7.2 but with an alias to keep the compatibility and avoid any change in the 
+day-to-day usage
 
 ### Assertions & asserters
 
@@ -33,10 +34,30 @@ Now the asserter on exception has an `isInstanceOf` that can be used assertions 
 #### Stream
 Now the asserter on stream has a `isRead` and `isWritten`  that can be used assertions without brackets.
 
+
+```php
+$this
+    ->given($streamController = \atoum\mock\stream::get())
+    ->if(file_get_contents($streamController->getPath()))
+    ->then()
+        ->stream($streamController)
+            ->isRead();
+
+// is now the same as
+$this
+    ->given($streamController = \atoum\mock\stream::get())
+    ->if(file_get_contents($streamController->getPath()))
+    ->then()
+        ->stream($streamController)
+            ->isRead;
+```
+
+Example is comming from the [documentation](http://docs.atoum.org/fr/latest/assertions.html#stream).
+
 ### Documentation
 
-Since the last revision, a lot of improvements on mock usage have been made. Several asserter and assertion 
-have been added like for the resources, stream, generator or the constant.
+Since the last revision, a lot of improvements on [mock usage][documentation_mock] and on [configuration][documentation_configuration] have been made.
+Several asserter and assertion have been added like for the resources, stream, generator or the constant.
 
 You can see more on the [Change list][documentation].
 
@@ -53,3 +74,5 @@ You can see more on the [Change list][documentation].
 [commits]: https://github.com/atoum/atoum/compare/3.0.0...3.1.0
 [contributors]: https://github.com/orgs/atoum/teams/contributors
 [documentation]: https://github.com/atoum/atoum-documentation/compare/9ce2aa4...master
+[documentation_configuration]: http://docs.atoum.org/en/latest/configuration_bootstraping.html
+[documentation_mock]: http://docs.atoum.org/en/latest/mocking_systems.html
