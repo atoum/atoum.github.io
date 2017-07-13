@@ -10,7 +10,7 @@ use Milo\Github;
 
 // greating
 echo 'Great, if you are here is to publish a new release, so the team have made a great work!', PHP_EOL;
-echo 'So, just aswer to some questions', PHP_EOL;
+echo 'So, just answer to some questions', PHP_EOL;
 
 // taking data
 $currentRevision = readline('Last revision: ');
@@ -18,7 +18,7 @@ $newRevision = readline('New revision: ');
 $author = readline('Your pseudo: ');
 $publicationDate = readline('Publication date for the news(YYYY-MM-DD): ');
 
-$file = __DIR__ . '/../../_posts/' . $publicationDate . '-release-' . str_replace('.', '-', $newRevision) . '.markdown';
+$file = dirname(__DIR__, 2) . '/_posts/' . $publicationDate . '-release-' . str_replace('.', '-', $newRevision) . '.markdown';
 
 // get data from github about the release
 $api = new Github\Api;
@@ -83,7 +83,7 @@ $contributors = count($authors);
 $fileChanged = count($results->files);
 
 ob_start();
-include __DIR__ . '/release.markdow.tpl.php';
+include __DIR__ . '/release.markdown.tpl.php';
 $content = ob_get_flush();
 file_put_contents($file, $content);
 
