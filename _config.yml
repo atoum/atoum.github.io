@@ -7,8 +7,6 @@ exclude:
   - vendor
   - scripts
 
-include: ['_pages']
-
 markdown: kramdown
 kramdown:
     parse_block_html: true
@@ -32,7 +30,7 @@ ga:
 collections:
   pages:
     output: true
-    permalink: /:path/
+    permalink: /:path.html
   posts:
     output: true
     permalink: /:categories/:year/:month/:day/:title.html
