@@ -6,6 +6,9 @@ exclude:
   - docker-compose.yml
   - vendor
   - scripts
+  - Gemfile
+  - Gemfile.lock
+  - README.md
 
 markdown: kramdown
 kramdown:
