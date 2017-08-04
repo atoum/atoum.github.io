@@ -6,23 +6,22 @@ author: "@Grummfy"
 categories: news
 ---
 
-The [GLPI project][GLPI] [recently announced][announced-en][^1] that they have migrated to atoum for their unit test suite. So let's get back on
-this news. We ask several questions to the official team of the project to have some feedback, [Johan Cwiklinski](https://github.com/trasher) 
-with some member of his team answered them.
+The [GLPI project][GLPI] [recently announced][announced-en][^1] that they have migrated their unit test suite to atoum. So let's get back on
+this news. We interviewed [Johan Cwiklinski](https://github.com/trasher) and some other members of the project's official team about this migration.
 
 ## 1. Can you summary the GLPI project and the usage of PHP inside it?
 
-GLPI is an open source IT asset management and Service Desk software. The project has started 15 years ago and is written in PHP.
+[GLPI][GLPI] is an open source IT asset management and Service Desk software. The project has started 15 years ago and is written in PHP.
 The project was led by an association until 2015, and since then the development is headed by [Teclib](www.teclib.com).
 
-Since 2015; we are trying to rewrite and modernise the whole project, starting with the backend.
+Since 2015; we are trying to rewrite and modernize the whole project, starting with the backend.
 
 ## 2. When did you start using unit test for the project?
 
-At first, one regular contributor has tried to add unit tests into the project in 2010. But project managers did not follow him, and this has quickly been abandoned.
-Then, in 2015, the same contributor has tried again to add tests on the project; with much more success :)
+Firstly, one regular contributor has tried to add unit tests into the project in 2010. But project managers did not follow him, and this was quickly abandoned.
+Then, in 2015, The same contributor tried again to add tests on the project; with much more success :)
 
-## 3. What were the issues you were facing with PHPUnit? Why did you choose atoum instead of other tools to resolve it?
+## 3. What kind of difficulties do you encounter with PHPUnit? Why did you choose atoum instead of other tools to resolve it?
 
 We didn’t really face issues with PHPUnit. This is more a choice that was dictated by atoum capabilities; like:
 
@@ -38,13 +37,13 @@ Last but not least; atoum is a French project at the origin; just like GLPI!
 
 ## 4. Did you meet some issue during the migration from PHPUnit to atoum?
 
-Well... We had to entirely rewrite our tests. It’s more a painful than a difficult work at first; but finally, we’ve not spent that much time on the rewrite process.
+Well... We had to entirely rewrite our tests. It’s more a painful than a difficult work at first; but finally, we haven't spent too much time on this rewrite work.
 Of course, we didn’t implement all atoum features; but we plan to update our tests in the future.
 
 We did have a really basic usage of PHPUnit; the only thing that required much more work was the `@depends`[^2] capability of PHPUnit.
 That was quite easy to change; and has benefited: we now run all our tests from a fresh, out of the box GLPI environment.
 
-Another issue was that atoum is much less permissive than PHPUnit per default; but this was not an issue because we got many little things fixed (such a PHP notices...).
+Another issue was that atoum is much less permissive than PHPUnit per default; but this was not a real issue because we got many little things fixed (such a PHP notices...).
 
 ## 5. Did you have any advice for other people that would like to migrate to atoum from PHPUnit?
 
@@ -55,7 +54,7 @@ or just on a small part of your code.
 
 ## 6. You recently receive a price related to security, can you tel us more about it?
 
-Teclib has been involved in a project to adapt it to match SoC (Security operation centre) requirements. The project had also been an opportunity to develop a REST API.
+[Teclib](www.teclib.com) has been involved in a project to adapt it to match SoC (Security operation centre) requirements. The project had also been an opportunity to develop a REST API.
 
 Being part of the OW2 Consortium community, GLPI received the 2017 Technology Council special prize for its work on addressing security requirements but also 
 the big working currently being made to modernise the framework. The jury has mentioned the implementation of unit tests and the switch from PHPUnit to atoum !
