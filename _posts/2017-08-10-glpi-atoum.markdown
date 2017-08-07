@@ -57,7 +57,7 @@ or just on a small part of your code.
 [Teclib](www.teclib.com) has been involved in a project to adapt it to match SoC (Security operation centre) requirements. The project had also been an opportunity to develop a REST API.
 
 Being part of the OW2 Consortium community, GLPI [received][award-link] the [2017 Technology Council special prize][award-tweet] for its work on addressing security requirements but 
-also the big working currently being made to modernise the framework. The jury has mentioned the implementation of unit tests and the switch from PHPUnit to atoum!
+also the big working currently being made to modernize the framework. The jury has mentioned the implementation of unit tests and the switch from PHPUnit to atoum!
 
 ![Picture of award winning](https://pbs.twimg.com/media/DDRlUoSXgAAXBIp.jpg "Award winning")
 
