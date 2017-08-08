@@ -8,7 +8,7 @@ title: Release policy
 This project has several rules about release:
 * this project follows [semver](http://semver.org/) for the version number
 * release a new version **every 6 weeks** (minor), when it's relevant
-* release **ASAP for any bug** (patch).
+* release **as soon as possible for any bug** (patch).
 
 ### Deprecation
 
@@ -32,15 +32,17 @@ But, for any reason next major may start before the previous one reaches EOL.
 
 In any case next minor/patch release source code lives on the master branch.
 
+## Semver & rolling-release
+atoum follow semver, but also [rolling release](https://en.wikipedia.org/wiki/Rolling_release) principle. So
+the *master* branch is considered as stable and can be directly used without any issue and represent the latest stable version. 
 
 ## Extensions
-The officially supported extension [^1] has a different release policy. It's more released when it's ready:
+The officially supported extension[^1] has a different release policy. It's more released when it's ready:
 * if there is BC break, will be released in-sync with atoum for new atoum major release
 * may be released at the same time (minor)
-* released ASAP for any bug fix.
+* released as soon as possible for any bug fix.
 
 ## Teams
-The team leading the release is [clearly identified](https://github.com/orgs/atoum/teams/rms/members) on github.
-    
+The team leading the release is [clearly identified](https://github.com/orgs/atoum/teams/rms/members) on github.    
 
 [^1]: the official extension stands on github repository `atoum/*-extension`
