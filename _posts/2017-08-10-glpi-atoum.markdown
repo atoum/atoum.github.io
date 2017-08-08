@@ -23,7 +23,7 @@ Forward to 2015, the same contributor tried again to add tests on the project, w
 
 ## 3. What kinds of difficulties do you encounter with PHPUnit? Why did you choose atoum instead of other tools to resolve it?
 
-We didn’t really face issues with PHPUnit. This is more a technical choice that was led by atoum capabilities, like:
+We didn’t really face issues with PHPUnit. This is more a technical choice for atoum capabilities, like:
 
 * Testing variable types (if you test an integer and get a string, this is not correct),
 * Wonderful mocking system (that allows mocking PHP native functions, constants, …),
