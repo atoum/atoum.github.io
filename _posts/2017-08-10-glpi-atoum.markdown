@@ -104,7 +104,7 @@ like this one can bring to others and I hope you also like it. If you use atoum 
 
 [^1]: The [announce](http://glpi-project.org/spip.php?breve374) in French
 [^2]: Making possible for one test to depend on another, and to get the results of the first one as a parameter of the second one.
-[^3]: GLPI use atoum since one month and half
+[^3]: GLPI use atoum since two month (PR was merged the 2017-06-07)
 [^4]: Galette is an open source membership management web application towards non-profit organisations.
 [GLPI]: http://glpi-project.org/
 [announced-en]: http://glpi-project.org/spip.php?breve375
