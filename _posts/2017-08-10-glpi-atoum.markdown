@@ -9,19 +9,19 @@ categories: news
 The [GLPI project][GLPI] [recently announced][announced-en][^1] that they have migrated their unit test suites to atoum. So let's get back on
 this news. We interviewed [Johan Cwiklinski](https://github.com/trasher) and some other members of the project's official team about this migration.
 
-## 1. Can you summary the GLPI project and the usage of PHP inside it?
+## 1. Can you summarize the GLPI project and its usage of PHP?
 
 [GLPI][GLPI] is an open source IT asset management and Service Desk software. The project has started 15 years ago and is written in PHP.
 The project was led by an association until 2015, and since then the development is headed by [Teclib](www.teclib.com).
 
 Since 2015, we are trying to rewrite and modernise the whole project, starting with the backend.
 
-## 2. When did you start using unit test for the project?
+## 2. When did you start using unit tests for the project?
 
 Firstly, one regular contributor has tried to add unit tests into the project in 2010. But project managers did not follow him, and it was quickly abandoned.
 Forward to 2015, the same contributor tried again to add tests on the project, with much more success :)
 
-## 3. What kinds of difficulties do you encounter with PHPUnit? Why did you choose atoum instead of other tools to resolve it?
+## 3. What kind of difficulties did you encounter with PHPUnit? Why did you choose atoum instead of other tools to resolve it?
 
 We didn’t really face issues with PHPUnit. This is more a technical choice for atoum capabilities, like:
 
@@ -37,7 +37,7 @@ Last but not least: atoum is a French project at the origin, just like GLPI!
 
 ## 4. Can you tell us why you have disabled the concurrent test for the GLPI project?
 
-In some case, due to the current GLPI code, some tests could not be run concurrently, this cause unpredictable results. Also, GLPI use a huge 
+In some case, due to the current GLPI code, some tests could not be run concurrently, this cause unpredictable results. Also, GLPI uses a huge 
 array in the standard session for configuration, we also had trouble with this :-/
 
 We plan to work on those issues later, but this is a huge job we cannot do right now.
@@ -54,9 +54,9 @@ Another issue was that atoum is much less permissive than PHPUnit per default, b
 
 Here is some telemetry information regarding these tests:
 * We had 25 tested classes with PHPUnit, and (of course!) still 25 with atoum,
-* There were about 2600 assertions with PHPUnit, but more than 5000 with atoum. This came for various reasons, one was that many returns were not tested and lend to un-understandable situations,
-* I’ve spent about *2 or 3 work days* to achieve the *complete migration*. I’ve also taken a few hours to migrate already opened pull requests that provided unit tests.
-* Since atoum migration, some tests have been added. We now test 66 classes with 9000 assertions.[^3] :)
+* There were about 2600 assertions with PHPUnit, but more than 5000 with atoum. This came for various reasons, one was that many returns were not tested and led to un-understandable situations,
+* I’ve spent about *2 or 3 work days* to achieve the *complete migration*. I’ve also taken a few hours to migrate already opened pull requests that provided unit tests,
+* Since atoum migration, some tests have been added. We now test 66 classes with 9000 assertions[^3] :),
 * Running tests on Travis took 2-3 minutes with PHPunit and 3-4 with atoum. But since we’ve added many new assertions, and we do not use atoum multi-threading capabilities, this is not really relevant for us. ;)
     
 ## 6. Did you see a difference in the way you maintain or develop the project since you have added unit test?
