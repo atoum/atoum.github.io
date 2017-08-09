@@ -35,7 +35,14 @@ We didn’t really face issues with PHPUnit. This is more a technical choice for
 
 Last but not least: atoum is a French project at the origin, just like GLPI!
 
-## 4. Did you face some issues during the migration from PHPUnit to atoum?
+## 4. Can you tell us why you have disabled the concurrent test for the GLPI project?
+
+In some case, due to the current GLPI code, some tests could not be run concurrently, this cause unpredictable results. Also, GLPI use a huge 
+array in the standard session for configuration, we also had trouble with this :-/
+
+We plan to work on those issues later, but this is a huge job we cannot do right now.
+
+## 5. Did you face some issues during the migration from PHPUnit to atoum?
 
 Well… We had to entirely rewrite our test suites. It’s more painful than a difficult work at first, but finally, we haven't spent too much time on this rewrite work.
 Of course, we didn’t implement all atoum features, but we plan to update our tests in the future.
@@ -45,14 +52,31 @@ That was quite easy to change and brought some nice benefits: We now run all our
 
 Another issue was that atoum is much less permissive than PHPUnit per default, but this was not a real issue because we got many little things fixed (such as PHP notices…).
 
-## 5. Did you have any advice for other people that would like to migrate to atoum from PHPUnit?
+Here is some telemetry information regarding these tests:
+* We had 25 tested classes with PHPUnit, and (of course!) still 25 with atoum,
+* There were about 2600 assertions with PHPUnit, but more than 5000 with atoum. This came for various reasons, one was that many returns were not tested and lend to un-understandable situations,
+* I’ve spent about *2 or 3 work days* to achieve the *complete migration*. I’ve also taken a few hours to migrate already opened pull requests that provided unit tests.
+* Since atoum migration, some tests have been added. We now test 66 classes with 9000 assertions.[^3] :)
+* Running tests on Travis took 2-3 minutes with PHPunit and 3-4 with atoum. But since we’ve added many new assertions, and we do not use atoum multi-threading capabilities, this is not really relevant for us. ;)
+    
+## 6. Did you see a difference in the way you maintain or develop the project since you have added unit test?
+
+Well…
+
+On the development side, we generally spend more time writing new features since we require unit tests to be added. And we also try to write
+tests on issues we fix, to reproduce them for the first time and then to prevent future regressions. That’s mainly how our process has changed for 
+the moment.
+
+On the project governance, we have to convince our contributors to write unit tests… This is not really an easy part :D
+
+## 7. Did you have any advice for other people that would like to migrate to atoum from PHPUnit?
 
 First of all, I’d advise people to write unit tests.
 
 Most people I know actually use PHPUnit because they’ve always used it, so let’s give atoum a try, …) Well, at least try it, on a new project for example,
 or just on a small part of your code.
 
-## 6. You recently receive a price related to security, can you tell us more about it?
+## 8. You recently receive a price related to security, can you tell us more about it?
 
 [Teclib](www.teclib.com) has been involved in a project to adapt it to match SoC (Security operation centre) requirements. The project had also been an opportunity to develop a REST API.
 
@@ -61,14 +85,14 @@ also the big working currently being made to modernize the framework. The jury h
 
 ![Picture of award winning](https://pbs.twimg.com/media/DDRlUoSXgAAXBIp.jpg "Award winning")
 
-## 7. If you have anything else to say, please feel free!
+## 9. If you have anything else to say, please feel free!
 
 I’ve been involved in various projects (open source or not) for years. As many developers, I was not really aware of unit testing.
 When I’ve started to write unit tests on my PHP applications, I chose PHPUnit (the only one I’d heard about at the time) but never really liked it.
 
 When I’ve discovered atoum (I don’t remember exactly when, but that was far before the first semver release), I’ve immediately loved it. That was much
-clearer to me to understand and write tests. I began to like that! …
-I’ve used atoum in several closed source projects (even when the "frameworks" say to use something else), but also in [Galette](http://galette.eu)[^3],
+clearer to me to understand and write tests. I began to like that…
+I’ve used atoum in several closed source projects (even when the "frameworks" say to use something else), but also in [Galette](http://galette.eu)[^4],
 which has unit tests powered by atoum since 2013.
 
 
@@ -80,7 +104,8 @@ like this one can bring to others and I hope you also like it. If you use atoum 
 
 [^1]: The [announce](http://glpi-project.org/spip.php?breve374) in French
 [^2]: Making possible for one test to depend on another, and to get the results of the first one as a parameter of the second one.
-[^3]: Galette is an open source membership management web application towards non-profit organisations.
+[^3]: GLPI use atoum since one month and half
+[^4]: Galette is an open source membership management web application towards non-profit organisations.
 [GLPI]: http://glpi-project.org/
 [announced-en]: http://glpi-project.org/spip.php?breve375
 [award-link]: https://www.ow2con.org/bin/view/2017/Awards_Results
