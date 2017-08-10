@@ -12,7 +12,7 @@ this news. We interviewed [Johan Cwiklinski](https://github.com/trasher) and som
 ## 1. Can you summarize the GLPI project and its usage of PHP?
 
 [GLPI][GLPI] is an open source IT asset management and Service Desk software. The project has started 15 years ago and is written in PHP.
-The project was led by an association until 2015, and since then the development is headed by [Teclib](www.teclib.com).
+The project was led by an association until 2015, and since then the development is headed by [Teclib](http://www.teclib.com).
 
 Since 2015, we are trying to rewrite and modernise the whole project, starting with the backend.
 
@@ -78,7 +78,7 @@ or just on a small part of your code.
 
 ## 8. You recently receive a price related to security, can you tell us more about it?
 
-[Teclib](www.teclib.com) has been involved in a project to adapt it to match SoC (Security operation centre) requirements. The project had also been an opportunity to develop a REST API.
+[Teclib](http://www.teclib.com) has been involved in a project to adapt it to match SoC (Security operation centre) requirements. The project had also been an opportunity to develop a REST API.
 
 Being part of the OW2 Consortium community, GLPI [received][award-link] the [2017 Technology Council special prize][award-tweet] for its work on addressing security requirements but 
 also the big working currently being made to modernize the framework. The jury has mentioned the implementation of unit tests and the switch from PHPUnit to atoum!
@@ -104,7 +104,7 @@ like this one can bring to others and I hope you also like it. If you use atoum 
 
 [^1]: The [announce](http://glpi-project.org/spip.php?breve374) in French
 [^2]: Making possible for one test to depend on another, and to get the results of the first one as a parameter of the second one.
-[^3]: GLPI use atoum since two month (PR was merged the 2017-06-07)
+[^3]: GLPI use atoum since two month (PR was merged on 2017-06-07)
 [^4]: Galette is an open source membership management web application towards non-profit organisations.
 [GLPI]: http://glpi-project.org/
 [announced-en]: http://glpi-project.org/spip.php?breve375
