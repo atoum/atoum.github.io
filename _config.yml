@@ -1,4 +1,5 @@
-name: Atoum's website
+name: atoum's website
+url: http://atoum.org
 #highlighter: rouge
 timezone: Europe/Paris
 future: true
@@ -15,7 +16,7 @@ kramdown:
     parse_block_html: true
     parse_span_html: true
 
-gems:
+plugins:
   - jekyll-mentions
   - jemoji
   - jekyll-sitemap

@@ -7,6 +7,8 @@ title: Sources
 
 <p class="header__paragraph">atoum is easy to install</p>
 
+atoum also have a [release policy]({% link _pages/about/release_policy.md %}), that aims to keep the stability of the tools.
+
 <section class="visual-section">
 ## Install with Composer
 
@@ -77,28 +79,6 @@ Note the `-dphar.readonly=0` option to make the PHAR writable for this execution
 </section>
 
 <section class="visual-section">
-## Release process
-
-Historically, atoum is a [rolling-release] software, it means without any versions. While this is very challenging 
-because no regression must be introduced, this is not always comfortable for atoum's users that need versions, 
-especially with a quality tool. That's why atoum uses [the semantic versioning specification][semver] too.
-
-You can see the [latest atoum's version][release]. A [`CHANGELOG.md` file][changelog] is kept up-to-date.
-
-atoum has 2 release managers. They apply the following rules:
-
-1. If a bug has been fixed, a new version is released as soon as possible (it addresses the `z` in `x.y.z`),
-2. Every 6 weeks, a new version is released containing the new features (it addresses the `y` in `x.y.z`),
-3. If a backward-compatibility break is required, 2 new versions are released: a first one only with the new features
-   and a second one only with the backward-compatibility break (it addresses the `x` in `x.y.z`).
-
-Current release managers have been elected by the community and they are:
-
-* [Ivan Enderlin][@Hywan],
-* [Mikaël Randy][@mikaelrandy].
-</section>
-
-<section class="visual-section">
 ## Repositories
 
 atoum is using [Git][git]. [Repositories are hosted on Github][atoum-repo-gh] under the eponym organization: 
@@ -119,10 +99,6 @@ release.getPharShortUrl().then(function(url) {
 });
 </script>
 
-[release]: /atoum/atoum/#/releases/latest
-[changelog]: /atoum/atoum/#/blob/master/CHANGELOG.md
-[@Hywan]: https://github.com/Hywan
-[@mikaelrandy]: https://github.com/mikaelrandy
 [composer]: https://getcomposer.org/
 [packagist]: https://packagist.org/search/?q=atoum/
 [php-phar]: http://php.net/phar
@@ -131,5 +107,4 @@ release.getPharShortUrl().then(function(url) {
 [atoum-org-gh]: /atoum
 [release-phar]: /atoum/atoum/#/releases/download/2.5.0/atoum.phar
 [curl]: http://curl.haxx.se/
-[rolling-release]: https://en.wikipedia.org/wiki/Rolling_release
-[semver]: http://www.semver.org/
+
