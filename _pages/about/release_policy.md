@@ -18,14 +18,14 @@ the new major branch deprecated features will be removed.
 
 ## Support of previous major version
 
-We try to support a previous major version until *one* year after the *last minor/patch* release.
+We will support a previous major version until *one* year after the *last minor/patch* release.
 
 ### Multiple major releases living side-by-side
 
 When we release a new major version, we only support the current and the previous major version, but not more. To handle that,
 we follow this process:
-* the oldest major version will have its own branch and the newest will live on the master branch
-* bug-fixes will be backported
+* the oldest major version will have its own branch and the newest will live on the master branch;
+* bug-fixes will be backported;
 * features will be backported if possible or asked.
 
 But, for any reason next major may start before the previous one reaches EOL.
@@ -34,12 +34,12 @@ In any case next minor/patch release source code lives on the master branch.
 
 ## Semver & rolling-release
 atoum follow semver, but also [rolling release](https://en.wikipedia.org/wiki/Rolling_release) principle. So
-the *master* branch is considered as stable and can be directly used without any issue and represent the latest stable version. 
+**the *master* branch is considered as stable** and can be directly used without any issue and represent the latest stable version. 
 
 ## Extensions
-The officially supported extension[^1] has a different release policy. It's more released when it's ready:
-* if there is BC break, will be released in-sync with atoum for new atoum major release
-* may be released at the same time (minor)
+The officially supported extensions[^1] has a different release policy. They are released when they are ready:
+* if there is any BC break in atoum, they will be released in-sync with atoum for new atoum major release;
+* may be released at the same time (minor);
 * released as soon as possible for any bug fix.
 
 ## Teams
