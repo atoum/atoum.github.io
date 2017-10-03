@@ -212,6 +212,12 @@ article {
     padding: 25px 0 4em 0;
 }
 
+@media all and (max-width: 500px) {
+   article {
+      padding-bottom: 1em;
+   }
+}
+
 footer > p {
     font-size: .8em;
     text-align: center;
@@ -240,6 +246,31 @@ article > section > blockquote {
     margin-right: 4rem;
 }
 
+@media all and (max-width: 500px) {
+   article > p,
+   article > h1,
+   article > h2,
+   article > h3,
+   article > h4,
+   article > h5,
+   article > h6,
+   article > ol,
+   article > ul,
+   article > section > p,
+   article > section > h1,
+   article > section > h2,
+   article > section > h3,
+   article > section > h4,
+   article > section > h5,
+   article > section > h6,
+   article > section > ol,
+   article > section > ul,
+   article > section > blockquote {
+      margin-left: 1rem;
+      margin-right: 1rem;
+   }
+}
+
 .visual-section {
     margin-bottom: 1rem;
     padding-top: 1.5rem;
@@ -257,6 +288,12 @@ article > section > blockquote {
     .visual-section h4 {
         margin-top: 1.5rem;
     }
+
+@media all and (max-width: 500px) {
+   .visual-section {
+      padding-bottom: .5rem;
+   }
+}
 
 h1 {
     text-align: center;
@@ -286,6 +323,14 @@ footer a:not(.bare) {
     text-decoration: none;
     padding: .2em .2em .15em;
     background: #f5f2e7;
+}
+
+
+@media all and (max-width: 500px) {
+   article h2 a:not(.bare) {
+      line-height: 2em;
+   }
+
 }
 
 em em {
@@ -348,10 +393,6 @@ ol {
     }
 
 @media all and (max-width: 500px) {
-    ul:not(.bare) li {
-        margin-left: -1.3em;
-    }
-
     ul:not(.bare) li li {
         margin-left: -.25em;
     }
@@ -377,6 +418,12 @@ pre {
         color: inherit;
         font-size: .95rem;
     }
+
+@media all and (max-width: 500px) {
+    pre {
+       padding: .5em 1rem;
+    }
+}
 
 figure {
     text-align: center;
@@ -572,6 +619,12 @@ ul.integrations > li:before{
     width: 100%;
 }
 
+@media all and (max-width: 500px) {
+   .algolia-autocomplete {
+      width: 100%;
+   }
+}
+
 .ds-dropdown-menu {
     width: 100%;
     max-width: none !important;
@@ -594,7 +647,7 @@ blockquote cite::before {
 }
 
 .post-list {
-    padding:15px;
+    padding:15px 0;
 }
 
 #disqus_thread {
