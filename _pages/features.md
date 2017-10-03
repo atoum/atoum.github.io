@@ -258,53 +258,44 @@ Note the global `$script` and `$runner` variables: reach any part of atoum to fi
 ## Third-party integration
 
 atoum integrates well with those CI tools:
-<ul class="columns integrations" data-columns="5">
+<ul class="autocolumns integrations">
     <li>
-       <img src="images/integrations_logos/travis-ci.svg" />
-       <a href="https://travis-ci.org/">Travis CI</a>
+       <a href="https://travis-ci.org/"><img src="images/integrations_logos/travis-ci.svg" alt="" />Travis CI</a>
        <a href="http://docs.atoum.org/en/latest/cookbook.html#use-with-travis-ci" class="integration__doc-link">(see how)</a>
     </li>
     <li>
-       <img src="images/integrations_logos/jenkins.svg" />
-       <a href="https://jenkins-ci.org/">Jenkins</a>
+       <a href="https://jenkins-ci.org/"><img src="images/integrations_logos/jenkins.svg" alt="" />Jenkins</a>
        <a href="http://docs.atoum.org/en/latest/cookbook.html#use-inside-jenkins-or-hudson" class="integration__doc-link">(see how)</a>
     </li>
     <li>
-       <img src="images/integrations_logos/gitlab.svg" />
-       <a href="https://about.gitlab.com/gitlab-ci/">GitLab CI</a>
+       <a href="https://about.gitlab.com/gitlab-ci/"><img src="images/integrations_logos/gitlab.svg" alt="" />GitLab CI</a>
        <a href="http://docs.gitlab.com/ce/ci/examples/php.html#using-atoum" class="integration__doc-link">(see how)</a>
     </li>
     <li>
-       <img src="images/integrations_logos/circleci.svg" />
-       <a href="https://circleci.com/">Circle CI</a>
+       <a href="https://circleci.com/"><img src="images/integrations_logos/circleci.svg" alt="" />Circle CI</a>
     </li>
     <li>
-       <img src="images/integrations_logos/phpci.svg" />
-       <a href="https://www.phptesting.org/">PHPCI</a>
+       <a href="https://www.phptesting.org/"><img src="images/integrations_logos/phpci.svg" alt="" />PHPCI</a>
        <a href="https://www.phptesting.org/wiki/Atoum-Plugin" class="integration__doc-link">(see how)</a>
     </li>
 </ul>
 
 atoum has a **great** integration with those IDEs:
-<ul class="columns integrations" data-columns="4">
+<ul class="autocolumns integrations">
     <li>
-      <img src="images/integrations_logos/phpstorm.svg" />
-      <a href="https://www.jetbrains.com/phpstorm/">PhpStorm</a>
+      <a href="https://www.jetbrains.com/phpstorm/"><img src="images/integrations_logos/phpstorm.svg" alt="" />PhpStorm</a>
       <a href="https://github.com/atoum/phpstorm-plugin" class="integration__doc-link">(see how)</a>
     </li>
     <li>
-      <img src="images/integrations_logos/atom.svg" />
-      <a href="https://atom.io/">Atom</a>
+      <a href="https://atom.io/"><img src="images/integrations_logos/atom.svg" alt="" />Atom</a>
       <a href="https://github.com/atoum/atom-plugin" class="integration__doc-link">(see how)</a>
     </li>
     <li>
-       <img src="images/integrations_logos/sublime-text.svg" />
-       <a href="http://www.sublimetext.com/">Sublime Text</a>
+       <a href="http://www.sublimetext.com/"><img src="images/integrations_logos/sublime-text.svg" alt="" />Sublime Text</a>
        <a href="http://docs.atoum.org/en/latest/ide.html#sublime-text-2" class="integration__doc-link">(see how)</a>
     </li>
     <li>
-       <img src="images/integrations_logos/netbeans.svg" />
-       <a href="http://www.sublimetext.com/">NetBeans</a>
+       <a href="http://www.sublimetext.com/"><img src="images/integrations_logos/netbeans.svg" alt="" />NetBeans</a>
        <a href="http://docs.atoum.org/en/latest/ide.html#sublime-text-2" class="integration__doc-link">(see how)</a>
     </li>
 </ul>
@@ -319,25 +310,21 @@ but atoum also plays well with:
 
 You can also use atoum with your regular build tools and/or dependancy manager:
 
-<ul class="columns integrations" data-columns="4">
+<ul class="autocolumns integrations">
     <li>
-       <img src="images/integrations_logos/composer.svg" />
-       <a href="https://getcomposer.org/">Composer</a>
+       <a href="https://getcomposer.org/"><img src="images/integrations_logos/composer.svg" alt="" />Composer</a>
        <a href="http://docs.atoum.org/en/latest/getting_started.html#composer" class="integration__doc-link">(see how)</a>
     </li>
     <li>
-       <img src="images/integrations_logos/phing.svg" />
-       <a href="http://www.phing.info/">Phing</a>
+       <a href="http://www.phing.info/"><img src="images/integrations_logos/phing.svg" alt="" />Phing</a>
        <a href="http://docs.atoum.org/en/latest/cookbook.html#step-3-launching-tests-via-jenkins-or-hudson" class="integration__doc-link">(see how)</a>
     </li>
     <li>
-       <img src="images/integrations_logos/robo.svg" />
-       <a href="http://robo.li/">Robo</a>
+       <a href="http://robo.li/"><img src="images/integrations_logos/robo.svg" alt="" />Robo</a>
        <a href="http://robo.li/tasks/Testing/#atoum" class="integration__doc-link">(see how)</a>
     </li>
     <li>
-       <img src="images/integrations_logos/grumphp.svg" />
-       <a href="https://github.com/phpro/grumphp">GrumPHP</a>
+       <a href="https://github.com/phpro/grumphp"><img src="images/integrations_logos/grumphp.svg" alt="" />GrumPHP</a>
        <a href="https://github.com/phpro/grumphp/blob/master/doc/tasks/atoum.md" class="integration__doc-link">(see how)</a>
     </li>
 </ul>

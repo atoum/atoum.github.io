@@ -536,6 +536,23 @@ table {
     }
 }
 
+.autocolumns {
+   border-spacing: 1rem;
+}
+
+.autocolumns li {
+   display: table-cell;
+   background: #f5f2e7;
+   padding: .5em;
+}
+
+@media all and (max-width: 500px) {
+    .autocolumns li {
+       display: block;
+       margin-left: 0!important;
+    }
+}
+
 .avatars {
     margin: 1em 0;
     padding: 0 4rem
