@@ -23,9 +23,34 @@ title: atoum
     padding: 15px 35px;
   }
 
+  @media all and (max-width: 500px) {
+     .about-features-block {
+        width: auto;
+        padding: 15px 1rem;
+     }
+     .about-features-block.code {
+        padding:0;
+        float: none;
+        display: block;
+     }
+  }
+
   article .whats-next a {
     padding: 20px;
     font-size: 1.52em;
+  }
+
+  article .whats-next .about-features-block {
+     width: 33%;
+     text-align: center;
+  }
+  @media all and (max-width: 500px) {
+     article .whats-next .about-features-block {
+        width: 100%;
+     }
+     article .whats-next .about-features-block a {
+        display: block;
+     }
   }
 </style>
 
@@ -48,7 +73,7 @@ title: atoum
         The asserters will make you tests <strong>easy to read</strong> and simplify your test. Also, more things will be tested with less code because asserter will also test things like types.
       </p>
     </div>
-    <div class="about-features-block">
+    <div class="about-features-block code">
 {% highlight php %}
 <?php
 $this
@@ -83,7 +108,7 @@ $this
     <div class="about-features-block">
       Easy to use, and with a lot of features, atoum mocks will make you not hesitate to write mocks, so your tests will be <strong>more decoupled and easier to maintain</strong>.
     </div>
-    <div class="about-features-block">
+    <div class="about-features-block code">
 {% highlight php %}
 <?php
 $mockDbClient = new \mock\Database\Client();
@@ -133,13 +158,13 @@ $this->calling($mockDbClient)->select = function() {
   <p>atoum has many more features, here are the next steps to try it or read more about them:</p>
 
   <div class="about-features-container whats-next">
-    <div class="about-features-block" style="width: 33%;text-align:center">
+    <div class="about-features-block">
       <a href="/sources.html">Download It</a>
     </div>
-    <div class="about-features-block" style="width: 33%;text-align:center">
+    <div class="about-features-block">
       <a href="/features.html">View more features</a>
     </div>
-    <div class="about-features-block" style="width: 33%;text-align:center">
+    <div class="about-features-block">
       <a href="http://docs.atoum.org">Read the documentation</a>
     </div>
   </div>
