@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Release 3.3.0"
-date: 2018-03-16 10:00:00
+date: 2018-03-19 10:00:00
 author: "@mikaelrandy"
 categories: release
 ---
@@ -10,22 +10,22 @@ We are proud to announce the availability of atoum [3.3.0][milestone]!
 
 ## Stats
 
-* 43 [commits][commits],
+* 43 [commits],
 * 129 files changed,
-* 7 contributors,
-* 13 [PR closed][changelog].
+* 7 [new features][changelog],
+* 5 [bug fix][changelog].
 
 ## What's new
 
 As we work on the next [major release], this release focus on stabilization and bug fixes, but there is also some new features.
 
 #### `string::notMatches` assertion
-The new `notMatches` assertion on `string` asserter allow to test that a string do not match a regexp.
+The new `notMatches` assertion on `string` asserter allow to test that a string does not match a regular expression.
 
 #### `@os` annotation
 If you want to write OS specific tests, atoum now provide an `@os` assertion to check OS before launching test
 
-Here is an example : 
+Here is an example:
 ```php
 namespace tests\units
 {
@@ -54,9 +54,9 @@ namespace tests\units
 ```
 
 #### Dot report
-If you need a condensed output of atoum execution, we had a new Dot report who only display test execution progression, without any other details :
+If you need a condensed output of atoum execution, we add a new dot report that only display test execution progression, without any other details :
 
-```$ bin/atoum -udr -f tests/units/classes/test.php
+```$ bin/atoum --use-dot-report -f tests/units/classes/test.php
 ............................................................ [60/65]
 .....                                                        [65/65]
 
