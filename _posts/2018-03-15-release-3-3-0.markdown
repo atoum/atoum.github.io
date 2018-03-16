@@ -63,6 +63,11 @@ If you need a condensed output of atoum execution, we had a new Dot report who o
 Success (1 test, 65/65 methods, 0 void method, 0 skipped method, 872 assertions)!
 ```
 
+#### Memory usage
+Memory usage information displayed after test suite execution now display real maximum memory usage.
+
+Previously, in case of garbage collector execution, memory usage value could be wrong.
+
 ## Links
 
 * [Milestone][milestone],
