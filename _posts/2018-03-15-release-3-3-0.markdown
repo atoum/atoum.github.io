@@ -1,0 +1,83 @@
+---
+layout: post
+title: "Release 3.3.0"
+date: 2018-03-19 10:00:00
+author: "@mikaelrandy"
+categories: release
+---
+
+We are proud to announce the availability of atoum [3.3.0][milestone]!
+
+## Stats
+
+* 43 [commits],
+* 129 files changed,
+* 7 [new features][changelog],
+* 5 [bug fix][changelog].
+
+## What's new
+
+As we work on the next [major release], this release focus on stabilization and bug fixes, but there is also some new features.
+
+#### `string::notMatches` assertion
+The new `notMatches` assertion on `string` asserter allow to test that a string does not match a regular expression.
+
+#### `@os` annotation
+If you want to write OS specific tests, atoum now provide an `@os` assertion to check OS before launching test
+
+Here is an example:
+```php
+namespace tests\units
+{
+    /**
+     * @os !darwin
+     */
+    class stdClass extends \mageekguy\atoum\test
+    {
+        /**
+         * @os linux
+         */
+        public function testOnlyOnLinux()
+        {
+
+        }
+
+        /**
+         * @os !linux
+         */
+        public function testEverywhereButLinuxAndDarwin()
+        {
+
+        }
+    }
+}
+```
+
+#### Dot report
+If you need a condensed output of atoum execution, we add a new dot report that only display test execution progression, without any other details :
+
+```$ bin/atoum --use-dot-report -f tests/units/classes/test.php
+............................................................ [60/65]
+.....                                                        [65/65]
+
+Success (1 test, 65/65 methods, 0 void method, 0 skipped method, 872 assertions)!
+```
+
+#### Memory usage
+Memory usage information displayed after test suite execution now display real maximum memory usage.
+
+Previously, in case of garbage collector execution, memory usage value could be wrong.
+
+## Links
+
+* [Milestone][milestone],
+* [Release][release],
+* [Changelog][changelog],
+* [Commits][commits].
+
+[milestone]: https://github.com/atoum/atoum/issues?utf8=%E2%9C%93&q=milestone%3A3.3.0+is%3Aclosed+
+[release]: https://github.com/atoum/atoum/releases/tag/3.3.0
+[changelog]: https://github.com/atoum/atoum/blob/master/CHANGELOG.md#330---2018-03-15
+[commits]: https://github.com/atoum/atoum/compare/3.2.0...3.3.0
+[contributors]: https://github.com/orgs/atoum/teams/contributors
+
