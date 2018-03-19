@@ -56,7 +56,8 @@ namespace tests\units
 #### Dot report
 If you need a condensed output of atoum execution, we add a new dot report that only display test execution progression, without any other details :
 
-```$ bin/atoum --use-dot-report -f tests/units/classes/test.php
+```bash
+$ bin/atoum --use-dot-report -f tests/units/classes/test.php
 ............................................................ [60/65]
 .....                                                        [65/65]
 
