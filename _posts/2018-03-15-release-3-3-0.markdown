@@ -19,10 +19,10 @@ We are proud to announce the availability of atoum [3.3.0][milestone]!
 
 As we work on the next [major release], this release focus on stabilization and bug fixes, but there is also some new features.
 
-#### `string::notMatches` assertion
+### `string::notMatches` assertion
 The new `notMatches` assertion on `string` asserter allow to test that a string does not match a regular expression.
 
-#### `@os` annotation
+### `@os` annotation
 If you want to write OS specific tests, atoum now provide an `@os` assertion to check OS before launching test
 
 Here is an example:
@@ -53,7 +53,7 @@ namespace tests\units
 }
 ```
 
-#### Dot report
+### Dot report
 If you need a condensed output of atoum execution, we add a new dot report that only display test execution progression, without any other details :
 
 ```bash
@@ -64,7 +64,7 @@ $ bin/atoum --use-dot-report -f tests/units/classes/test.php
 Success (1 test, 65/65 methods, 0 void method, 0 skipped method, 872 assertions)!
 ```
 
-#### Memory usage
+### Memory usage
 Memory usage information displayed after test suite execution now display real maximum memory usage.
 
 Previously, in case of garbage collector execution, memory usage value could be wrong.
