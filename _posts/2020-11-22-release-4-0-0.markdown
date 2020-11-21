@@ -1,0 +1,55 @@
+---
+layout: post
+title: "Release 4.0.0"
+date: 2020-11-22 10:00:00
+author: "@Grummfy"
+categories: release
+---
+
+We are proud to announce the availability of atoum [4.0.0][milestone]!
+
+## Stats
+
+* 44 [commits][commits],
+* 300 files changed,
+* 5 [contributors][contributors],
+* 4 [breaking changes][changelog],
+* 1 [bug fix][changelog].
+
+## What's new
+
+This release is quite particular because it came with the compatibility with PHP 7.2[^1] but also PHP 8.x! So two steps in one.
+For this we need to thank [@cedric-anne](https://github.com/cedric-anne) from the [GLPI project][GLPI] for his huge work.
+
+### Deprecations and breaking changes
+
+So with the compatibility changes with the new PHP versions, we have stepped up the minimal version of PHP required to run atoum to 7.2[^2]. So a lot of code has been dropped, it was not required anymore!
+But the previous version of atoum are still available, so if you use an older PHP version, feel free to use the 3.4.2 version.
+
+But this change was not the only breaking one, the biggest of the change, is the namespace. This is probably the only breaking change that can have some real impact on your code and require some attention. `mageekguy\atoum` became `atoum\atoum`.
+
+### Documentation and extensions
+
+Most of the existing extension need some code change to work properly with this new release. So feel free to create pull requests for it ;) Otherwise it will require some time to migrate it.
+ 
+Regarding the documentation, nothing particular to change, just checking the namespaces will be required.
+
+## Project notes
+
+The project needs some help, so feel free to create PR (documentation, extension, bugfix, ...). In the next big steps, some refactoring will be made to try to split the core inside multiple packages (asserters, mocking systems, etc) to allow usage outside atoum but also ease the maintenance.
+
+## Links
+
+* [Milestone][milestone],
+* [Release][release],
+* [Changelog][changelog],
+* [Commits][commits].
+
+[^1]: atoum was not totally compatible with php 7.x. Just some rare issue, but still!
+[^2]: If you look at [PHP version](https://www.php.net/supported-versions.php), you see that version 7.2 is out since nearly 3 years and it's already in security only fixes.
+[milestone]: https://github.com/atoum/atoum/issues?q=milestone%3A4.0.0+is%3Aclosed
+[release]: https://github.com/atoum/atoum/releases/tag/4.0.0
+[changelog]: https://github.com/atoum/atoum/blob/master/CHANGELOG.md#400---2020-11-21
+[commits]: https://github.com/atoum/atoum/compare/3.4.2...4.0.0
+[contributors]: https://github.com/orgs/atoum/teams/contributors
+[GLPI]: http://glpi-project.org/
