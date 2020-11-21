@@ -12,7 +12,7 @@ We are proud to announce the availability of atoum [<?= $newRevision ?>][milesto
 
 * <?= $commits ?> [commits][commits],
 * <?= $fileChanged ?> files changed,
-* <?= $contributors ?> contributors,
+* <?= $contributors ?> [contributors][contributors],
 * <?= $numberOfFeatures ?> [new features][changelog],
 * <?= $numberOfBugFix ?> [bug fix][changelog].
 
@@ -59,8 +59,12 @@ TODO
 * [Changelog][changelog],
 * [Commits][commits].
 
-[milestone]: <?= $link['milestone'] ?>
-[release]: <?= $link['release'] ?>
-[changelog]: <?= $link['changelog'] ?>
-[commits]: <?= $link['commits'] ?>
+[milestone]: <?= $link['milestone']; ?>
+
+[release]: <?= $link['release']; ?>
+
+[changelog]: <?= $link['changelog']; ?>
+
+[commits]: <?= $link['commits']; ?>
+
 [contributors]: https://github.com/orgs/atoum/teams/contributors
