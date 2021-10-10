@@ -27,6 +27,7 @@ $response = $api->get('/repos/:owner/:repo/releases/tags/:tag', [
 	'repo' => 'atoum',
     'tag' => $newRevision,
 ]);
+
 $results = $api->decode($response);
 
 $link = [

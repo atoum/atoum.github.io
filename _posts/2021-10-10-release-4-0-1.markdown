@@ -1,0 +1,44 @@
+---
+layout: post
+title: "Release 4.0.1"
+date: 2021-10-10 10:00:00
+author: "@Grummfy"
+categories: release
+---
+
+We are proud to announce the availability of atoum [4.0.1][milestone]!
+
+## Stats
+
+* 29 [commits][commits],
+* 34 files changed,
+* 3 [contributors][contributors],
+* 5 [bug fix][changelog].
+
+## What's new
+
+A lot of compatibility fix for PHP 7 & 8 it's the main purpose of this one, and some others are coming.
+
+At the end of the year, with the end of support of some PHP 7 version, some breaking change will come. So stay alert to this.
+
+## Bugfix
+
+* [#865](https://github.com/atoum/atoum/pull/865) Warning about return type break ([@cedric-anne])
+* [#864](https://github.com/atoum/atoum/pull/864) Fix UnionType handling in mock generator ([@cedric-anne])
+* [#869](https://github.com/atoum/atoum/pull/869) Fix deprecated usage of addcslashes ([@cedric-anne])
+* [#860](https://github.com/atoum/atoum/pull/860) Fix PHP8.1 compatibility issue related to missing return type & unserialize ([@cedric-anne])
+* [#858](https://github.com/atoum/atoum/pull/858) Fix PHP8.0 compatibility and CI matrix ([@villfa])
+* [#853](https://github.com/atoum/atoum/pull/853) Handle usage of assertions in `test::afterTestMethod()` ([@cedric-anne])----- release message to help redact this -----
+
+## Links
+
+* [Milestone][milestone],
+* [Release][release],
+* [Changelog][changelog],
+* [Commits][commits].
+
+[milestone]: https://github.com/atoum/atoum/issues?q=milestone%3A4.0.1+is%3Aclosed
+[release]: https://github.com/atoum/atoum/releases/tag/4.0.1
+[changelog]: https://github.com/atoum/atoum/blob/master/CHANGELOG.md#401---2021-10-10
+[commits]: https://github.com/atoum/atoum/compare/4.0.0...4.0.1
+[contributors]: https://github.com/orgs/atoum/teams/contributors
