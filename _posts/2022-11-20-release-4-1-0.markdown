@@ -1,0 +1,42 @@
+---
+layout: post
+title: "Release 4.1.0"
+date: 2022-11-21 10:00:00
+author: "@Grummfy"
+categories: release
+---
+
+We are proud to announce the availability of atoum [4.1.0][milestone]! Thanks to [@cedric-anne](https://github.com/cedric-anne) for the help.
+
+## Stats
+
+* 19 [commits][commits],
+* 17 files changed,
+* 3 [contributors][contributors],
+* 2 [new features][changelog],
+
+## What's new
+
+It's mainly a compatibility release : adding support of PHP 8.2 and dropping support of PHP 7.2 & 7.3.
+
+## Compatibility with new version of PHP
+* [#883](https://github.com/atoum/atoum/pull/883) and [#884](https://github.com/atoum/atoum/pull/884) Handle `static` return type in mock generator ([@shavounet])
+* [#881](https://github.com/atoum/atoum/pull/881) Fix PHP 8.2 compatibility issues ([@cedric-anne])
+* [#868](https://github.com/atoum/atoum/pull/868) Drop PHP 7.2 and PHP 7.3 support ([@cedric-anne])
+
+## Social network
+
+We are now present on [Mastodon](https://phpc.social/@atoum) too
+
+## Links
+
+* [Milestone][milestone],
+* [Release][release],
+* [Changelog][changelog],
+* [Commits][commits].
+
+[milestone]: https://github.com/atoum/atoum/issues?q=milestone%3A4.1.0+is%3Aclosed
+[release]: https://github.com/atoum/atoum/releases/tag/4.1.0
+[changelog]: https://github.com/atoum/atoum/blob/master/CHANGELOG.md#410---2022-11-20
+[commits]: https://github.com/atoum/atoum/compare/4.0.3...4.1.0
+[contributors]: https://github.com/orgs/atoum/teams/contributors
