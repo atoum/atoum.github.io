@@ -1,0 +1,46 @@
+---
+layout: post
+title: "Release 4.2.0"
+date: 2023-07-30 10:00:00
+author: "@Grummfy"
+categories: release
+---
+
+We are proud to announce the availability of atoum [4.2.0][milestone]!
+
+## Stats
+
+* 16 [commits][commits],
+* 12 files changed,
+* 2 [contributors][contributors],
+* 3 [new features][changelog].
+
+## What's new
+
+## Compatibility with new version of PHP
+
+* [#893](https://github.com/atoum/atoum/pull/893) Drop PHP 7.4 support ([@cedric-anne])
+* [#892](https://github.com/atoum/atoum/pull/892) Fix `null`, `true` and `false` type handling ([@cedric-anne])
+* [#891](https://github.com/atoum/atoum/pull/891) Update tested PHP versions ([@cedric-anne])
+* [#890](https://github.com/atoum/atoum/pull/890) Fix duplicate variable declaration on PHP 8.3 ([@cedric-anne])----- release message to help redact this -----
+
+### Deprecations and breaking changes
+
+Drop support of PHP 7.4
+
+## State of the project
+
+The project is in maintenance only. For the moment no new feature will be added except if a pull request is made for it.
+
+## Links
+
+* [Milestone][milestone],
+* [Release][release],
+* [Changelog][changelog],
+* [Commits][commits].
+
+[milestone]: https://github.com/atoum/atoum/issues?q=milestone%3A4.2.0+is%3Aclosed
+[release]: https://github.com/atoum/atoum/releases/tag/4.2.0
+[changelog]: https://github.com/atoum/atoum/blob/master/CHANGELOG.md#420---2023-07-30
+[commits]: https://github.com/atoum/atoum/compare/4.1.0...4.2.0
+[contributors]: https://github.com/orgs/atoum/teams/contributors
